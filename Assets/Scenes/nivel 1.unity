@@ -1013,7 +1013,7 @@ GameObject:
   - component: {fileID: 863546951}
   - component: {fileID: 863546950}
   m_Layer: 0
-  m_Name: Idle_0
+  m_Name: Dog
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
