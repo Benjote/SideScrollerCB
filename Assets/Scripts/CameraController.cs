@@ -5,15 +5,14 @@ using UnityEngine;
 public class CameraController : MonoBehaviour
 {
     public Transform target; // Transform del personaje a seguir
-    public float smoothSpeed = 0.125f; // Suavidad del movimiento de la cámara
+    public float smoothSpeed = 0.125f; // Suavidad del movimiento de la cï¿½mara
 
     private void LateUpdate()
     {
-        // Movimiento de la cámara
+        // Movimiento de la cï¿½mara
         Vector3 desiredPosition = target.position + new Vector3(0, 0, -10);
-        desiredPosition.y = transform.position.y; // Mantener la altura actual de la cámara
+        desiredPosition.y = transform.position.y; // Mantener la altura actual de la cï¿½mara
         Vector3 smoothedPosition = Vector3.Lerp(transform.position, desiredPosition, smoothSpeed);
         transform.position = smoothedPosition;
     }
 }
-

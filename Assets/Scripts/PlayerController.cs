@@ -5,14 +5,18 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public float speed = 5f;
+    public float runSpeedMultiplier = 2f;
     public float groundCheckRadius = 0.2f;
+    public string groundTag = "Ground";
     public LayerMask groundLayer;
-    //public float knockbackForce = 5f; // Fuerza de retroceso al ser tocado por el enemigo
+    public float jumpForce = 5f; // Fuerza del salto
 
     private Rigidbody2D rb;
     private SpriteRenderer spriteRenderer;
     private Animator animator;
     private bool isGrounded;
+    private bool isJumping; // Indica si el personaje está saltando
+    private bool isRunning; // Indica si el personaje está corriendo
 
     void Start()
     {
@@ -24,7 +28,7 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         float moveInput = Input.GetAxisRaw("Horizontal");
-        rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
+        rb.velocity = new Vector2(moveInput * GetSpeed(), rb.velocity.y);
 
         // Cambiar el parámetro "Horizontal" en el Animator cuando el personaje se mueve
         animator.SetFloat("Horizontal", Mathf.Abs(moveInput));
@@ -40,21 +44,68 @@ public class PlayerController : MonoBehaviour
             spriteRenderer.flipX = false;
         }
 
-        //Veerificar si el personaje está en contacto con el suelo
-        isGrounded = Physics2D.OverlapCircle(transform.position, groundCheckRadius, groundLayer);
+        // Verificar si el personaje está en contacto con el suelo
+        isGrounded = Physics2D.OverlapCircle(transform.position, groundCheckRadius, groundLayer) &&
+                     IsGroundWithTag();
+
+        // Salto
+        if (isGrounded)
+        {
+            isJumping = false; // Si el personaje está en el suelo, no está saltando
+            animator.SetBool("Jump", false); // Cambia el parámetro "Jump" a false
+        }
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            if (isGrounded && !isJumping)
+            {
+                rb.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
+                isJumping = true; // El personaje está saltando
+                animator.SetBool("Jump", true); // Cambia el parámetro "Jump" a true
+                Debug.Log("Saltando");
+            }
+        }
+
+        // Cambiar entre Idle y Run al presionar y soltar Shift
+        if (Input.GetKeyDown(KeyCode.LeftShift) || Input.GetKeyDown(KeyCode.RightShift))
+        {
+            isRunning = false; // Reiniciar el estado de correr
+
+            if (moveInput != 0)
+            {
+                isRunning = true;
+                animator.SetBool("Run", true); // Cambia el parámetro "Run" a true
+            }
+        }
+        else if (Input.GetKeyUp(KeyCode.LeftShift) || Input.GetKeyUp(KeyCode.RightShift))
+        {
+            isRunning = false;
+            animator.SetBool("Run", false); // Cambia el parámetro "Run" a false
+        }
+
+        // Utilizar la variable isRunning en tu lógica
+        if (isRunning)
+        {
+            // Lógica adicional para cuando el personaje está corriendo
+            rb.velocity = new Vector2(moveInput * GetSpeed() * runSpeedMultiplier, rb.velocity.y);
+        }
     }
 
+    float GetSpeed()
+    {
+        return isRunning ? speed * runSpeedMultiplier : speed;
+    }
 
-    //private void OnCollisionEnter2D(Collision2D collision)
-    //{
-    //    if (collision.gameObject.CompareTag("Enemies"))
-    //    {
-    //        // Calcular la dirección del retroceso (izquierda)
-    //        Vector2 knockbackDirection = Vector2.left;
-
-    //        // Aplicar una fuerza de salto hacia atrás
-    //        rb.velocity = Vector2.zero; // Detener el movimiento actual
-    //        rb.AddForce(knockbackDirection * knockbackForce, ForceMode2D.Impulse);
-    //    }
-    //}
+    bool IsGroundWithTag()
+    {
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, groundCheckRadius);
+        foreach (Collider2D collider in colliders)
+        {
+            if (collider.CompareTag(groundTag))
+            {
+                return true;
+            }
+        }
+        return false;
+    }
 }
