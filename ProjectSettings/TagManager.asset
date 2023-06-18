@@ -7,6 +7,8 @@ TagManager:
   - Enemy
   - Ground
   - NPC
+  - Climbable
+  - WallC
   layers:
   - Default
   - TransparentFX
@@ -14,7 +16,7 @@ TagManager:
   - Ground
   - Water
   - UI
-  - 
+  - WallC
   - 
   - 
   - 
