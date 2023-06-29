@@ -8,6 +8,8 @@ TagManager:
   - Ground
   - NPC
   - Climbable
+  - WallCL
+  - WallCR
   - WallC
   layers:
   - Default

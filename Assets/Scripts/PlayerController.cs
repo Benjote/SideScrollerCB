@@ -6,19 +6,21 @@ public class PlayerController : MonoBehaviour
 {
     public float speed = 5f;
     public float runSpeedMultiplier = 2f;
-    public float groundCheckRadius = 0.2f;
+    public Vector2 groundCheckSize = new Vector2(1f, 0.2f);
     public Transform groundC;
     public string groundTag = "Ground";
     public LayerMask groundLayer;
-    public float jumpForce = 5f; // Fuerza del salto
-    public float verticalSpeed = 5f; // Velocidad vertical del personaje
+    public float jumpForce = 5f;
+    public float verticalSpeed = 5f;
 
     private Rigidbody2D rb;
     private SpriteRenderer spriteRenderer;
     private Animator animator;
     private bool isGrounded;
-    private bool isJumping; // Indica si el personaje está saltando
-    private bool isRunning; // Indica si el personaje está corriendo
+    private bool isJumping;
+    private bool isRunning;
+
+    public PlayerWallClimb pwc;
 
     void Start()
     {
@@ -31,29 +33,22 @@ public class PlayerController : MonoBehaviour
     {
         float moveInput = Input.GetAxisRaw("Horizontal");
 
-        // Cambiar el parámetro "Horizontal" en el Animator cuando el personaje se mueve
         animator.SetFloat("Horizontal", Mathf.Abs(moveInput));
 
-        // Voltear el sprite si el personaje se mueve hacia la izquierda
         if (moveInput < 0)
         {
             spriteRenderer.flipX = true;
         }
-        // Voltear el sprite si el personaje se mueve hacia la derecha
         else if (moveInput > 0)
         {
             spriteRenderer.flipX = false;
         }
 
-        // Verificar si el personaje está en contacto con el suelo
-        isGrounded = Physics2D.OverlapCircle(groundC.position, groundCheckRadius, groundLayer) &&
-                     IsGroundWithTag();
+        isGrounded = Physics2D.OverlapBox(groundC.position, groundCheckSize, 0f, groundLayer) && IsGroundWithTag();
 
-        // Salto
         if (isGrounded)
         {
-            isJumping = false; // Si el personaje está en el suelo, no está saltando
-            // animator.SetBool("Jump", false); // Cambia el parámetro "Jump" a false
+            isJumping = false;
         }
 
         if (Input.GetKeyDown(KeyCode.Space))
@@ -61,8 +56,8 @@ public class PlayerController : MonoBehaviour
             if (isGrounded && !isJumping)
             {
                 rb.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
-                isJumping = true; // El personaje está saltando
-                animator.SetBool("Jump", true); // Cambia el parámetro "Jump" a true
+                isJumping = true;
+                animator.SetBool("Jump", true);
                 Debug.Log("Saltando");
             }
         }
@@ -70,24 +65,21 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.LeftShift) || Input.GetKeyUp(KeyCode.RightShift))
         {
             isRunning = false;
-            animator.SetBool("Run", false); // Cambia el parámetro "Run" a false
+            animator.SetBool("Run", false);
         }
         else
         {
-            // Cambiar entre Idle y Run al presionar y soltar Shift
             if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift))
             {
-                isRunning = false; // Reiniciar el estado de correr
+                isRunning = false;
 
                 if (moveInput != 0)
                 {
                     isRunning = true;
-                    animator.SetBool("Run", true); // Cambia el parámetro "Run" a true
+                    animator.SetBool("Run", true);
                 }
             }
         }
-
-
     }
 
     private void FixedUpdate()
@@ -103,7 +95,7 @@ public class PlayerController : MonoBehaviour
 
     bool IsGroundWithTag()
     {
-        Collider2D[] colliders = Physics2D.OverlapCircleAll(groundC.position, groundCheckRadius);
+        Collider2D[] colliders = Physics2D.OverlapBoxAll(groundC.position, groundCheckSize, 0f);
         foreach (Collider2D collider in colliders)
         {
             if (collider.CompareTag(groundTag))
@@ -112,5 +104,32 @@ public class PlayerController : MonoBehaviour
             }
         }
         return false;
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Debug.Log(collision.collider.gameObject.name);
+        if (collision.collider.gameObject.tag == "WallC")
+        {
+            this.enabled = false;
+            pwc.enabled = true;
+            if (collision.GetContact(0).point.x - transform.position.x > 0)
+            {
+                pwc.climbSpeed = Mathf.Abs(pwc.climbSpeed);
+            }
+            else
+            {
+                pwc.climbSpeed = Mathf.Abs(pwc.climbSpeed) * -1;
+            }
+        }
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        if (groundC == null)
+            return;
+
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireCube(groundC.position, new Vector3(groundCheckSize.x, groundCheckSize.y, 0f));
     }
 }
