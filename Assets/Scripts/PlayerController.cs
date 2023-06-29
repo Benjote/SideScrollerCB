@@ -19,6 +19,7 @@ public class PlayerController : MonoBehaviour
     private bool isGrounded;
     private bool isJumping;
     private bool isRunning;
+    private bool isFalling;
 
     public PlayerWallClimb pwc;
 
@@ -49,6 +50,13 @@ public class PlayerController : MonoBehaviour
         if (isGrounded)
         {
             isJumping = false;
+            animator.SetBool("Jump", false);
+            animator.SetBool("Fall", false);
+        }
+        else if (!isJumping && rb.velocity.y < 0)
+        {
+            isFalling = true;
+            animator.SetBool("Fall", true);
         }
 
         if (Input.GetKeyDown(KeyCode.Space))
@@ -58,6 +66,7 @@ public class PlayerController : MonoBehaviour
                 rb.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
                 isJumping = true;
                 animator.SetBool("Jump", true);
+                animator.SetBool("Fall", false);
                 Debug.Log("Saltando");
             }
         }
@@ -131,5 +140,15 @@ public class PlayerController : MonoBehaviour
 
         Gizmos.color = Color.red;
         Gizmos.DrawWireCube(groundC.position, new Vector3(groundCheckSize.x, groundCheckSize.y, 0f));
+    }
+
+    // Método llamado desde el evento de animación en el último frame de la animación "Fall"
+    public void OnFallAnimationEnd()
+    {
+        if (isFalling)
+        {
+            animator.SetBool("Fall", false);
+            isFalling = false;
+        }
     }
 }
