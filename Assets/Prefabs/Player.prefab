@@ -157,8 +157,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.1630804, y: -0.109234214}
-  m_Size: {x: 1.6925057, y: 0.99028915}
+  m_Offset: {x: 0.1630804, y: -0.20054582}
+  m_Size: {x: 1.6925062, y: 1.1729146}
   m_Direction: 1
 --- !u!70 &5716979528151090771
 CapsuleCollider2D:
@@ -204,13 +204,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   runSpeedMultiplier: 1.5
-  groundCheckRadius: 0.2
+  groundCheckSize: {x: 0.88, y: 0.48}
   groundC: {fileID: 1114368111}
   groundTag: Ground
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
   jumpForce: 5
+  verticalSpeed: 5
+  pwc: {fileID: 2052925571}
 --- !u!114 &2052925571
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -218,14 +220,15 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1781206731001546420}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 23e461c66aab58b4e8a72952a21eceb3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   wallTag: Climbable
   climbAnimationParameter: WallClimb
-  climbSpeed: 1.91
+  climbSpeed: 5
+  pc: {fileID: 1781206731001546415}
 --- !u!95 &1781206731001546413
 Animator:
   serializedVersion: 5
