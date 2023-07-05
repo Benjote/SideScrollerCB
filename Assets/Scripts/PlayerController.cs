@@ -51,7 +51,7 @@ public class PlayerController : MonoBehaviour
         {
             isJumping = false;
             animator.SetBool("Jump", false);
-            animator.SetBool("Fall", false);
+            animator.SetBool("IsFalling", false);
         }
         else if (!isJumping && rb.velocity.y < 0)
         {
