@@ -314,9 +314,9 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2029016973}
+  - {fileID: 1668398338}
   - {fileID: 639245134}
   - {fileID: 1976421431}
-  - {fileID: 1668398338}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -398,10 +398,10 @@ MonoBehaviour:
   dialoguePanel: {fileID: 1750839322}
   dialogueText: {fileID: 929394625}
   dialogueLines:
-  - 'Surkz: Hello there, you may find some surprises so watch out'
-  - 'Key: meow'
-  - "Surkz: Up there you will meet Chu\xF1a he will take you to the end of your trip"
-  - 'Key: meow'
+  - "Surkz: Hello there, you may find some surprises so watch out.\n\n\t\t"
+  - 'Key: Meow'
+  - "Surkz: Up there you will meet Chu\xF1a he take you to the end of your trip."
+  - 'Key: Meow'
   advanceKey: 13
   onKeyDown:
     m_PersistentCalls:
@@ -923,7 +923,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 112294250}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &663492023
 GameObject:
@@ -9382,7 +9382,7 @@ RectTransform:
   m_Children:
   - {fileID: 1750839323}
   m_Father: {fileID: 112294250}
-  m_RootOrder: 3
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -77374,7 +77374,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 112294250}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2029016971
 GameObject:
@@ -77392,7 +77392,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!212 &2029016972
 SpriteRenderer:
   m_ObjectHideFlags: 0
