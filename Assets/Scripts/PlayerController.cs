@@ -23,6 +23,9 @@ public class PlayerController : MonoBehaviour
 
     public PlayerWallClimb pwc;
 
+    [SerializeField] private GameObject collisionNormal;
+    [SerializeField] private GameObject collisionClimb;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -122,6 +125,7 @@ public class PlayerController : MonoBehaviour
         {
             this.enabled = false;
             pwc.enabled = true;
+
             if (collision.GetContact(0).point.x - transform.position.x > 0)
             {
                 pwc.climbSpeed = Mathf.Abs(pwc.climbSpeed);
@@ -130,6 +134,9 @@ public class PlayerController : MonoBehaviour
             {
                 pwc.climbSpeed = Mathf.Abs(pwc.climbSpeed) * -1;
             }
+
+            collisionNormal.SetActive(false);
+            collisionClimb.SetActive(true);
         }
     }
 
