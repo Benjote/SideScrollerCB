@@ -19,6 +19,8 @@ public class PlayerWallClimb : MonoBehaviour
 
     [SerializeField] private GameObject collisionNormal;
     [SerializeField] private GameObject collisionClimb;
+    public float ignoreFirstSeconds = 1;
+    float currentignoreFirstSeconds = 1;
 
     private void Start()
     {
@@ -27,6 +29,7 @@ public class PlayerWallClimb : MonoBehaviour
 
     private void OnEnable()
     {
+        currentignoreFirstSeconds  = ignoreFirstSeconds;
         if (endOfClimb != null) StopCoroutine(endOfClimb);
         animator = GetComponent<Animator>();
         animator.SetBool("WallClimb", true);
@@ -39,7 +42,7 @@ public class PlayerWallClimb : MonoBehaviour
 
     private void Update()
     {
-
+        currentignoreFirstSeconds -= Time.deltaTime;
         float moveInput = Input.GetAxisRaw("Horizontal");
 
         // Cambiar el parámetro "Horizontal" en el Animator cuando el personaje se mueve
@@ -52,18 +55,21 @@ public class PlayerWallClimb : MonoBehaviour
         rb.velocity = new Vector2(rb.velocity.x, moveInput * climbSpeed);
     }
 
-    private void OnCollisionExit2D(Collision2D collision)
+    private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.collider.gameObject.tag == "WallC")
+        Debug.Log(collision.name, collision);
+        
+        if (collision.gameObject.tag == "WallC" && currentignoreFirstSeconds <= 0)
         {
-            Debug.Log("Hola Mundo", collision.collider.gameObject);
-            if(endOfClimb != null) StopCoroutine(endOfClimb);
-            endOfClimb = StartCoroutine(ExitClimbMode(collision));
+            Debug.Log("Hola Mundo", collision.gameObject);
+            if (endOfClimb != null) StopCoroutine(endOfClimb);
+            endOfClimb = StartCoroutine(ExitClimbMode());
         }
+        
     }
 
     
-    public IEnumerator ExitClimbMode(Collision2D collision)
+    public IEnumerator ExitClimbMode()
     {
         yield return new WaitForSeconds(climbEndTime);
         ExitMode();

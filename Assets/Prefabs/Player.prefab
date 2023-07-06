@@ -10,13 +10,14 @@ GameObject:
   m_Component:
   - component: {fileID: 1095945986}
   - component: {fileID: 1095945987}
+  - component: {fileID: 1048259053}
   m_Layer: 0
   m_Name: CollisionClimb
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1095945986
 Transform:
   m_ObjectHideFlags: 0
@@ -39,15 +40,31 @@ CapsuleCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1095945985}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.13254881, y: -0.20722455}
+  m_Size: {x: 1.3225517, y: 1.3225517}
+  m_Direction: 0
+--- !u!70 &1048259053
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1095945985}
   m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.07, y: 0.08}
-  m_Size: {x: 1.06, y: 2.05}
-  m_Direction: 0
+  m_Offset: {x: 0.1630804, y: -0.20054582}
+  m_Size: {x: 1.6925062, y: 1.1729146}
+  m_Direction: 1
 --- !u!1 &1114368110
 GameObject:
   m_ObjectHideFlags: 0
@@ -124,8 +141,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.1630804, y: -0.20054582}
-  m_Size: {x: 1.6925062, y: 1.1729146}
+  m_Offset: {x: 0.12038451, y: -0.20054583}
+  m_Size: {x: 1.607118, y: 1.1729164}
   m_Direction: 1
 --- !u!1 &1781206731001546420
 GameObject:
@@ -295,9 +312,10 @@ MonoBehaviour:
   climbAnimationParameter: WallClimb
   climbSpeed: 5
   pc: {fileID: 1781206731001546415}
-  climbEndTime: 0.4
+  climbEndTime: 0.1
   collisionNormal: {fileID: 1279194349}
   collisionClimb: {fileID: 1095945985}
+  ignoreFirstSeconds: 0.03
 --- !u!95 &1781206731001546413
 Animator:
   serializedVersion: 5
