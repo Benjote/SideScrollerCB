@@ -7,7 +7,6 @@ public class PlayerWallClimb : MonoBehaviour
     public string climbAnimationParameter = "WallClimb";
     public float climbSpeed = 0.75f;
 
-    private bool isClimbing = false;
     private Rigidbody2D rb;
     private Animator animator;
 

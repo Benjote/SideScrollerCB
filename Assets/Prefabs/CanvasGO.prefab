@@ -485,6 +485,8 @@ MonoBehaviour:
   currentHearts: 0
   gameOverSceneName: GameOver
   pauseMenu: {fileID: 0}
+  pausePanel: {fileID: 0}
+  canPause: 1
 --- !u!1 &4855808572806958369
 GameObject:
   m_ObjectHideFlags: 0

@@ -59,7 +59,7 @@ public class PlayerController : MonoBehaviour
         else if (!isJumping && rb.velocity.y < 0)
         {
             isFalling = true;
-            animator.SetBool("Fall", true);
+            animator.SetBool("IsFalling", true);
         }
 
         if (Input.GetKeyDown(KeyCode.Space))
@@ -69,7 +69,7 @@ public class PlayerController : MonoBehaviour
                 rb.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
                 isJumping = true;
                 animator.SetBool("Jump", true);
-                animator.SetBool("Fall", false);
+                animator.SetBool("IsFalling", false);
                 Debug.Log("Saltando");
             }
         }
@@ -154,7 +154,7 @@ public class PlayerController : MonoBehaviour
     {
         if (isFalling)
         {
-            animator.SetBool("Fall", false);
+            animator.SetBool("IsFalling", false);
             isFalling = false;
         }
     }
