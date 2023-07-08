@@ -14,29 +14,24 @@ public class GameManager : MonoBehaviour
 
     private bool isPaused = false;
     public GameObject pauseMenu;
+    public GameObject pausePanel;
 
-    private void Awake()
-    {
-        // Verificar si ya existe una instancia del GameManager y destruir este objeto si es el caso
-        if (instance == null)
-        {
-            instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
-    }
+    public bool canPause = true; // Indica si el juego se puede pausar o no
 
     private void Start()
     {
         currentHearts = maxHearts; // Inicializar los corazones al máximo
+
+        if (!canPause)
+        {
+            pauseMenu.SetActive(false); // Desactivar el canvas de pausa al inicio
+            pausePanel.SetActive(false); // Desactivar el panel de pausa al inicio
+        }
     }
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (canPause && Input.GetKeyDown(KeyCode.Escape))
         {
             if (isPaused)
             {
@@ -55,6 +50,17 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(levelName);
     }
 
+    public void RestartLevel()
+    {
+        // Desactivar la pausa y ocultar el panel de pausa
+        isPaused = false;
+        pausePanel.SetActive(false);
+        Time.timeScale = 1;
+
+        // Reiniciar el nivel cargando la escena nuevamente
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
     public void QuitGame()
     {
         Debug.Log("Saliendo del juego");
@@ -63,10 +69,13 @@ public class GameManager : MonoBehaviour
 
     public void PauseGame()
     {
-        Debug.Log("Pausando el juego");
-        Time.timeScale = 0;
-        isPaused = true;
-        pauseMenu.SetActive(true);
+        if (canPause)
+        {
+            Debug.Log("Pausando el juego");
+            Time.timeScale = 0;
+            isPaused = true;
+            pausePanel.SetActive(true); // Activar el panel de pausa
+        }
     }
 
     public void ResumeGame()
@@ -74,7 +83,7 @@ public class GameManager : MonoBehaviour
         Debug.Log("Reanudando el juego");
         Time.timeScale = 1;
         isPaused = false;
-        pauseMenu.SetActive(false);
+        pausePanel.SetActive(false); // Desactivar el panel de pausa
     }
 
     public void TakeDamage()
@@ -83,7 +92,6 @@ public class GameManager : MonoBehaviour
 
         if (currentHearts <= 0)
         {
-            // Si no quedan corazones, cargar la escena de Game Over
             SceneManager.LoadScene(gameOverSceneName);
         }
     }

@@ -11,13 +11,11 @@ public class OnKeyPress : MonoBehaviour
     public Sprite changeToSprite;
 
     [SerializeField] KeyCode myKey;
-    // Start is called before the first frame update
     void Start()
     {
         
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(myKey))
