@@ -26,7 +26,7 @@ public class Enemigo2D : MonoBehaviour
         target = GameObject.Find("Player");
     }
 
-    public void Comportamiento()
+    public void Comportamientos()
     {
         if (Mathf.Abs(transform.position.x - target.transform.position.x) > rango_vision && !atacando)
         {
@@ -70,37 +70,37 @@ public class Enemigo2D : MonoBehaviour
         {
             if (Mathf.Abs(transform.position.x - target.transform.position.x) > rango_ataque && !atacando)
             {
-                if (transform.position.x < target.transform.position.x)
-                {
+               if (transform.position.x < target.transform.position.x)
+               {
                     ani.SetBool("walk", false);
                     ani.SetBool("run", true);
                     transform.Translate(Vector3.right * speed_run * Time.deltaTime);
                     transform.rotation = Quaternion.Euler(0, 0, 0);
                     ani.SetBool("attack", false);
-                }
-                else 
-                {
+               }
+               else
+               {
                     ani.SetBool("walk", false);
                     ani.SetBool("run", true);
                     transform.Translate(Vector3.right * speed_run * Time.deltaTime);
                     transform.rotation = Quaternion.Euler(0, 180, 0);
                     ani.SetBool("attack", false);
-                }
-            }
+               }
+            }     
             else
             {
                 if (!atacando)
                 {
                     if (transform.position.x < target.transform.position.x)
-                    {
-                        transform.rotation = Quaternion.Euler(0, 0, 0);
+                    {                        
+                        transform.rotation = Quaternion.Euler(0, 0, 0);                      
                     }
                     else
-                    {
+                    { 
                         transform.rotation = Quaternion.Euler(0, 180, 0);
                     }
                     ani.SetBool("walk", false);
-                    ani.SetBool("run", false);
+                    ani.SetBool("run", false);                    
                 }
             }
         }
@@ -109,7 +109,7 @@ public class Enemigo2D : MonoBehaviour
     public void Final_Ani()
     {
         ani.SetBool("attack", false);
-        atacando = false;
+        atacando = false;     
         rango.GetComponent<BoxCollider2D>().enabled = true;
     }
     public void ColliderWeaponTrue()
@@ -121,9 +121,9 @@ public class Enemigo2D : MonoBehaviour
         Hit.GetComponent<BoxCollider2D>().enabled = false;
     }
 
-    
+    // Update is called once per frame
     void Update()
     {
-        Comportamiento();
+        Comportamientos();
     }
 }

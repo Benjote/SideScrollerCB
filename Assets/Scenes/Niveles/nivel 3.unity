@@ -7243,6 +7243,24 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.9140606, y: 0.1433034}
   m_EdgeRadius: 0
+--- !u!1 &971079666 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1781206731001546420, guid: 634778f39705995479faf1779efa0194, type: 3}
+  m_PrefabInstance: {fileID: 868642863}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &971079673
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 971079666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da2df97107db7004d8d9f93376793891, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyObject: {fileID: 1414473789}
 --- !u!1 &1036393089
 GameObject:
   m_ObjectHideFlags: 0
@@ -59101,6 +59119,7 @@ GameObject:
   - component: {fileID: 1414473791}
   - component: {fileID: 1414473790}
   - component: {fileID: 1414473795}
+  - component: {fileID: 1414473796}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -59235,7 +59254,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1414473789}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 19.5, y: -4.77, z: 0}
+  m_LocalPosition: {x: 21.28, y: -4.77, z: 0}
   m_LocalScale: {x: 2.0809, y: 1.7217, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -59261,13 +59280,27 @@ MonoBehaviour:
   ani: {fileID: 0}
   direccion: 0
   speed_walk: 1.5
-  speed_run: 5
+  speed_run: 8
   target: {fileID: 0}
   atacando: 0
   rango_vision: 8
   rango_ataque: 2
   rango: {fileID: 904677660}
   Hit: {fileID: 729359600}
+--- !u!114 &1414473796
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1414473789}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4100005996a9da64d83473f5e004be51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 1414473792}
+  enemyCollider: {fileID: 1414473790}
 --- !u!1 &1430479496
 GameObject:
   m_ObjectHideFlags: 0
