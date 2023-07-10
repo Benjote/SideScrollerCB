@@ -8,7 +8,6 @@ public class Enemigo2D : MonoBehaviour
     public float cronometro;
     public Animator ani;
     public int direccion;
-    public float speed_walk;
     public float speed_run;
     public GameObject target;
     public bool atacando;
@@ -17,7 +16,6 @@ public class Enemigo2D : MonoBehaviour
     public float rango_ataque;
     public GameObject rango;
     public GameObject Hit;
-
 
     // Start is called before the first frame update
     void Start()
@@ -40,7 +38,6 @@ public class Enemigo2D : MonoBehaviour
             switch (rutina)
             {
                 case 0:
-                    ani.SetBool("walk", false);
                     break;
 
                 case 1:
@@ -49,20 +46,18 @@ public class Enemigo2D : MonoBehaviour
                     break;
 
                 case 2:
-
                     switch (direccion)
                     {
                         case 0:
                             transform.rotation = Quaternion.Euler(0, 0, 0);
-                            transform.Translate(Vector3.right * speed_walk * Time.deltaTime);
+                            transform.Translate(Vector3.right * speed_run * Time.deltaTime);
                             break;
 
                         case 1:
                             transform.rotation = Quaternion.Euler(0, 180, 0);
-                            transform.Translate(Vector3.right * speed_walk * Time.deltaTime);
+                            transform.Translate(Vector3.right * speed_run * Time.deltaTime);
                             break;
                     }
-                    ani.SetBool("walk", true);
                     break;
             }
         }
@@ -70,37 +65,34 @@ public class Enemigo2D : MonoBehaviour
         {
             if (Mathf.Abs(transform.position.x - target.transform.position.x) > rango_ataque && !atacando)
             {
-               if (transform.position.x < target.transform.position.x)
-               {
-                    ani.SetBool("walk", false);
+                if (transform.position.x < target.transform.position.x)
+                {
                     ani.SetBool("run", true);
                     transform.Translate(Vector3.right * speed_run * Time.deltaTime);
                     transform.rotation = Quaternion.Euler(0, 0, 0);
                     ani.SetBool("attack", false);
-               }
-               else
-               {
-                    ani.SetBool("walk", false);
+                }
+                else
+                {
                     ani.SetBool("run", true);
                     transform.Translate(Vector3.right * speed_run * Time.deltaTime);
                     transform.rotation = Quaternion.Euler(0, 180, 0);
                     ani.SetBool("attack", false);
-               }
-            }     
+                }
+            }
             else
             {
                 if (!atacando)
                 {
                     if (transform.position.x < target.transform.position.x)
-                    {                        
-                        transform.rotation = Quaternion.Euler(0, 0, 0);                      
+                    {
+                        transform.rotation = Quaternion.Euler(0, 0, 0);
                     }
                     else
-                    { 
+                    {
                         transform.rotation = Quaternion.Euler(0, 180, 0);
                     }
-                    ani.SetBool("walk", false);
-                    ani.SetBool("run", false);                    
+                    ani.SetBool("run", false);
                 }
             }
         }
@@ -109,7 +101,7 @@ public class Enemigo2D : MonoBehaviour
     public void Final_Ani()
     {
         ani.SetBool("attack", false);
-        atacando = false;     
+        atacando = false;
         rango.GetComponent<BoxCollider2D>().enabled = true;
     }
     public void ColliderWeaponTrue()
