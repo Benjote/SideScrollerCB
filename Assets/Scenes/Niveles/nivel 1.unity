@@ -938,14 +938,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d4b7de3f7068344da3fd08f605bf00c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueMark: {fileID: 1646957610}
-  dialoguePanel: {fileID: 91682378}
-  dialogueText: {fileID: 523910785}
-  dialogueLines:
-  - "Surkz: Hello there, you may find some surprises so watch out\n\t\t"
-  - 'Key: Meow'
-  - "Surkz: Up there you will meet Chu\xF1a he will take you to the end of your trip"
-  - 'Key: Meow'
 --- !u!61 &461986666
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9100,7 +9092,7 @@ GameObject:
   - component: {fileID: 1213347534}
   - component: {fileID: 1213347533}
   - component: {fileID: 1213347532}
-  - component: {fileID: 1213347531}
+  - component: {fileID: 1213347536}
   m_Layer: 0
   m_Name: "chu\xF1a "
   m_TagString: Untagged
@@ -9108,18 +9100,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1213347531
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1213347530}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d442b395ae6230844a59fa05412af638, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!95 &1213347532
 Animator:
   serializedVersion: 5
@@ -9151,7 +9131,7 @@ BoxCollider2D:
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_UsedByEffector: 1
+  m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.09158824, y: -0.36967114}
   m_SpriteTilingProperty:
@@ -9233,6 +9213,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1213347536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1213347530}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d442b395ae6230844a59fa05412af638, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1412040598
 GameObject:
   m_ObjectHideFlags: 0

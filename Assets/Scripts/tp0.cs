@@ -11,7 +11,7 @@ public class tp3 : MonoBehaviour
     {
         if(collision.gameObject.tag == "Player")
         {
-            SceneManager.LoadScene(4);
+            SceneManager.LoadScene(2);
         }
     }
 }
