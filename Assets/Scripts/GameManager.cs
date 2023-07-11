@@ -5,6 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    public int PuntosTotales { get  { return puntosTotales;  } }
+    private int puntosTotales;
+    public void SumarPuntos(int puntosASumar)
+    {
+        puntosTotales = puntosTotales + puntosASumar;
+        Debug.Log(puntosTotales);
+    }
     public static GameManager instance; // Instancia única del GameManager
 
     public int maxHearts = 3; // Número máximo de corazones
