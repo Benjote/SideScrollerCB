@@ -1,5 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< Updated upstream
+<<<<<<<< Updated upstream:Assets/fondos de los 3 niveles/desert/clouds.png.meta
 guid: 7f12908a81673ed4b94101a6e74119f2
+========
+guid: 514fcb159f99ae9488b2c658fb248111
+>>>>>>>> Stashed changes:Assets/Sprites/npc/chuña/idle-01 1.png.meta
+=======
+guid: 86331f9b19f7a3749afe64dcd04663d7
+>>>>>>> Stashed changes
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +55,11 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
+<<<<<<< Updated upstream
+  spritePixelsToUnits: 20
+=======
   spritePixelsToUnits: 100
+>>>>>>> Stashed changes
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1

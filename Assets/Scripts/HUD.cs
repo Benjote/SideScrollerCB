@@ -2,15 +2,36 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class HUD : MonoBehaviour
 {
     public GameManager gameManager;
     public TextMeshProUGUI puntos;
+    [SerializeField] private List<GameObject> listaCorazones;
+    [SerializeField] private Sprite corazonDesactivado;
+    private int totalMonedas;
+    [SerializeField] private TMP_Text textoMonedas;
 
+    void Start()
+    {
+        Coin.sumaMoneda += SumarMonedas;
+    }
 
     void Update()
     {
-        puntos.text = gameManager.PuntosTotales.ToString();
+        
+    }
+
+    private void SumarMonedas(int moneda)
+    {
+        totalMonedas += moneda;
+        textoMonedas.text = totalMonedas.ToString();
+    }
+
+    public void RestaCorazones (int indice)
+    {
+        Image imagenCorazon = listaCorazones[indice].GetComponent<Image>();
+        imagenCorazon.sprite = corazonDesactivado;
     }
 }

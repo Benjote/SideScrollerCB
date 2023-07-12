@@ -4,21 +4,24 @@ using UnityEngine;
 
 public class PlayerAttack : MonoBehaviour
 {
-    public GameObject enemyObject;
-    private EnemyDeath enemyDeath;
 
-    private void Start()
+    private EnemyDeath enemyDeath;
+    private BoxCollider2D colAttack;
+
+    private void Awake()
     {
-        // Obtén la referencia al script EnemyDeath del enemigo
-        enemyDeath = enemyObject.GetComponent<EnemyDeath>();
+        colAttack = GetComponent<BoxCollider2D>();      
+    }
+    private void Start()
+    {  
+
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        // Verifica si el objeto colisionado es el enemigo
         if (other.CompareTag("Enemy"))
         {
-            // Llama al método TakeDamage() del script EnemyDeath
+            Destroy(other.gameObject);
             enemyDeath.TakeDamage();
         }
     }

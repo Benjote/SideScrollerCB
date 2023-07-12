@@ -4,8 +4,13 @@ using UnityEngine;
 
 public class Coin : MonoBehaviour
 {
-    public int valor = 1;
-    public GameManager gameManager;
+    public delegate void SumaMoneda(int moneda);
+    public static event SumaMoneda sumaMoneda;
+
+    [SerializeField] private int cantidadMonedas;
+
+
+
     void Start()
     {
         
@@ -16,12 +21,21 @@ public class Coin : MonoBehaviour
         
     }
 
+
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.CompareTag("Player"))
         {
-            gameManager.SumarPuntos(valor);
-            Destroy(this.gameObject);
+            if (sumaMoneda != null)
+            {
+                SumarMoneda();
+                Destroy(this.gameObject);
+            }  
         }
+    }
+        private void SumarMoneda()
+    {
+        sumaMoneda(cantidadMonedas);
     }
 }

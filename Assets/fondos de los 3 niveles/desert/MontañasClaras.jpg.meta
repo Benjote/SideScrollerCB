@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< Updated upstream:Assets/fondos de los 3 niveles/desert/MontañasClaras.jpg.meta
 guid: 15fcf4f6cf25a7040ad6f7b18486a85a
+========
+guid: d7e65852fbf07f744bea63e80d781900
+>>>>>>>> Stashed changes:Assets/Sprites/npc/Rene/signpost.png.meta
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -33,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -47,7 +51,11 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
+<<<<<<<< Updated upstream:Assets/fondos de los 3 niveles/desert/MontañasClaras.jpg.meta
   spritePixelsToUnits: 100
+========
+  spritePixelsToUnits: 30
+>>>>>>>> Stashed changes:Assets/Sprites/npc/Rene/signpost.png.meta
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1

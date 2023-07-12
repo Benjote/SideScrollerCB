@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour
     public LayerMask groundLayer;
     public float jumpForce = 5f;
     public float verticalSpeed = 5f;
+    private int vidaPersonaje = 3;
 
     private Rigidbody2D rb;
     private SpriteRenderer spriteRenderer;
@@ -20,11 +21,15 @@ public class PlayerController : MonoBehaviour
     private bool isJumping;
     private bool isRunning;
     private bool isFalling;
+    private float posColX = 1;
+    private float posColY = 0;
 
     public PlayerWallClimb pwc;
 
     [SerializeField] private GameObject collisionNormal;
     [SerializeField] private GameObject collisionClimb;
+    [SerializeField] HUD HUD;
+    [SerializeField] private BoxCollider2D colAttack;
 
     void Start()
     {
@@ -35,16 +40,20 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+ 
+
         float moveInput = Input.GetAxisRaw("Horizontal");
 
         animator.SetFloat("Horizontal", Mathf.Abs(moveInput));
 
         if (moveInput < 0)
         {
+            colAttack.offset = new Vector2(-posColX, posColY);
             spriteRenderer.flipX = true;
         }
         else if (moveInput > 0)
         {
+            colAttack.offset = new Vector2(posColX, posColY);
             spriteRenderer.flipX = false;
         }
 
@@ -92,7 +101,19 @@ public class PlayerController : MonoBehaviour
                 }
             }
         }
+        
+        if(Input.GetKeyDown(KeyCode.K))
+        {
+            CausarHerida();
+        }  
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            animator.SetTrigger("Attack");
+        }     
     }
+
+
 
     private void FixedUpdate()
     {
@@ -158,4 +179,19 @@ public class PlayerController : MonoBehaviour
             isFalling = false;
         }
     }
+
+    private void CausarHerida()
+    {
+        if (vidaPersonaje > 0)
+        {
+            vidaPersonaje --;
+            HUD.RestaCorazones(vidaPersonaje);
+            if (vidaPersonaje == 0)
+            {
+                Debug.Log("Has muerto");
+            }
+        }
+    }
+
+
 }

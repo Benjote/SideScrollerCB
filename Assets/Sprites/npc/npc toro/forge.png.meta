@@ -1,0 +1,381 @@
+fileFormatVersion: 2
+<<<<<<< Updated upstream:Assets/npc/npc toro/forge.png.meta
+<<<<<<<< Updated upstream:Assets/Sprites/npc/npc toro/forge.png.meta
+guid: ce8310578f7ecfb49b3d20cfbc18d659
+========
+guid: e9b97776d24e3c245acf5844a250d44d
+>>>>>>>> Stashed changes:Assets/Enemigos/fox/fox_idle.png.meta
+=======
+guid: d04e49bb2bd607345a5a1c3a2cc069e4
+>>>>>>> Stashed changes:Assets/Sprites/npc/npc toro/forge.png.meta
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+<<<<<<< Updated upstream:Assets/npc/npc toro/forge.png.meta
+<<<<<<<< Updated upstream:Assets/Sprites/npc/npc toro/forge.png.meta
+=======
+>>>>>>> Stashed changes:Assets/Sprites/npc/npc toro/forge.png.meta
+      name: forge_0
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 20
+        width: 58
+        height: 49
+<<<<<<< Updated upstream:Assets/npc/npc toro/forge.png.meta
+========
+      name: fox_idle_0
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 4
+        width: 20
+        height: 29
+>>>>>>>> Stashed changes:Assets/Enemigos/fox/fox_idle.png.meta
+=======
+>>>>>>> Stashed changes:Assets/Sprites/npc/npc toro/forge.png.meta
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+<<<<<<< Updated upstream:Assets/npc/npc toro/forge.png.meta
+<<<<<<<< Updated upstream:Assets/Sprites/npc/npc toro/forge.png.meta
+      spriteID: a706e3db189daa94a84b602fc8948e28
+      internalID: -1052537739
+========
+      spriteID: 3d0b40f71aa08354d9b5df86ebe9619b
+      internalID: -415463399
+>>>>>>>> Stashed changes:Assets/Enemigos/fox/fox_idle.png.meta
+=======
+      spriteID: a706e3db189daa94a84b602fc8948e28
+      internalID: -1052537739
+>>>>>>> Stashed changes:Assets/Sprites/npc/npc toro/forge.png.meta
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+<<<<<<< Updated upstream:Assets/npc/npc toro/forge.png.meta
+<<<<<<<< Updated upstream:Assets/Sprites/npc/npc toro/forge.png.meta
+=======
+>>>>>>> Stashed changes:Assets/Sprites/npc/npc toro/forge.png.meta
+      name: forge_1
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 20
+        width: 58
+        height: 50
+<<<<<<< Updated upstream:Assets/npc/npc toro/forge.png.meta
+========
+      name: fox_idle_1
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 4
+        width: 20
+        height: 29
+>>>>>>>> Stashed changes:Assets/Enemigos/fox/fox_idle.png.meta
+=======
+>>>>>>> Stashed changes:Assets/Sprites/npc/npc toro/forge.png.meta
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+<<<<<<< Updated upstream:Assets/npc/npc toro/forge.png.meta
+<<<<<<<< Updated upstream:Assets/Sprites/npc/npc toro/forge.png.meta
+      spriteID: a6e3d5fa306b50741a7a239187ef8645
+      internalID: 1813693220
+========
+      spriteID: 68ca8b9179fdf3844a820d975c2eaf02
+      internalID: 112280936
+>>>>>>>> Stashed changes:Assets/Enemigos/fox/fox_idle.png.meta
+=======
+      spriteID: a6e3d5fa306b50741a7a239187ef8645
+      internalID: 1813693220
+>>>>>>> Stashed changes:Assets/Sprites/npc/npc toro/forge.png.meta
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+<<<<<<< Updated upstream:Assets/npc/npc toro/forge.png.meta
+<<<<<<<< Updated upstream:Assets/Sprites/npc/npc toro/forge.png.meta
+=======
+>>>>>>> Stashed changes:Assets/Sprites/npc/npc toro/forge.png.meta
+      name: forge_2
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 20
+        width: 58
+        height: 50
+<<<<<<< Updated upstream:Assets/npc/npc toro/forge.png.meta
+========
+      name: fox_idle_2
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 4
+        width: 20
+        height: 30
+>>>>>>>> Stashed changes:Assets/Enemigos/fox/fox_idle.png.meta
+=======
+>>>>>>> Stashed changes:Assets/Sprites/npc/npc toro/forge.png.meta
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+<<<<<<< Updated upstream:Assets/npc/npc toro/forge.png.meta
+<<<<<<<< Updated upstream:Assets/Sprites/npc/npc toro/forge.png.meta
+      spriteID: 5854547559a223143ae6072067d7347e
+      internalID: 1893599181
+========
+      spriteID: 74bd25775e234604598497d0d1b6fd93
+      internalID: 1456471370
+>>>>>>>> Stashed changes:Assets/Enemigos/fox/fox_idle.png.meta
+=======
+      spriteID: 5854547559a223143ae6072067d7347e
+      internalID: 1893599181
+>>>>>>> Stashed changes:Assets/Sprites/npc/npc toro/forge.png.meta
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+<<<<<<< Updated upstream:Assets/npc/npc toro/forge.png.meta
+<<<<<<<< Updated upstream:Assets/Sprites/npc/npc toro/forge.png.meta
+=======
+>>>>>>> Stashed changes:Assets/Sprites/npc/npc toro/forge.png.meta
+      name: forge_3
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 20
+        width: 58
+        height: 49
+<<<<<<< Updated upstream:Assets/npc/npc toro/forge.png.meta
+========
+      name: fox_idle_3
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 4
+        width: 20
+        height: 29
+>>>>>>>> Stashed changes:Assets/Enemigos/fox/fox_idle.png.meta
+=======
+>>>>>>> Stashed changes:Assets/Sprites/npc/npc toro/forge.png.meta
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+<<<<<<< Updated upstream:Assets/npc/npc toro/forge.png.meta
+<<<<<<<< Updated upstream:Assets/Sprites/npc/npc toro/forge.png.meta
+=======
+>>>>>>> Stashed changes:Assets/Sprites/npc/npc toro/forge.png.meta
+      spriteID: 2c4e7f4d3e8912d46be52d00d45f3f6f
+      internalID: -51869574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forge_4
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 20
+        width: 58
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 510647fb73150e34899b2505e0c92be7
+      internalID: 1084777584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: forge_5
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 20
+        width: 58
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b9d037e414e7bd4dbef77a4b9ee79ec
+      internalID: 1248557211
+<<<<<<< Updated upstream:Assets/npc/npc toro/forge.png.meta
+========
+      spriteID: 80aa59dcbbfb89b4fae532c16482a21d
+      internalID: 66500094
+>>>>>>>> Stashed changes:Assets/Enemigos/fox/fox_idle.png.meta
+=======
+>>>>>>> Stashed changes:Assets/Sprites/npc/npc toro/forge.png.meta
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+<<<<<<< Updated upstream:Assets/npc/npc toro/forge.png.meta
+<<<<<<<< Updated upstream:Assets/Sprites/npc/npc toro/forge.png.meta
+=======
+>>>>>>> Stashed changes:Assets/Sprites/npc/npc toro/forge.png.meta
+      forge_2: 1893599181
+      forge_4: 1084777584
+      forge_5: 1248557211
+      forge_1: 1813693220
+      forge_3: -51869574
+      forge_0: -1052537739
+<<<<<<< Updated upstream:Assets/npc/npc toro/forge.png.meta
+========
+      fox_idle_1: 112280936
+      fox_idle_3: 66500094
+      fox_idle_2: 1456471370
+      fox_idle_0: -415463399
+>>>>>>>> Stashed changes:Assets/Enemigos/fox/fox_idle.png.meta
+=======
+>>>>>>> Stashed changes:Assets/Sprites/npc/npc toro/forge.png.meta
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

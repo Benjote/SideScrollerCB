@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+<<<<<<< Updated upstream:Assets/npc/Rene/Toad_Static_0.controller.meta
+<<<<<<<< Updated upstream:Assets/Sprites/npc/Rene/Toad_Static_0.controller.meta
+guid: 0d151c21892ccaf499cf7404e00eed36
+========
+guid: 9beb2b03715e1db429c0fcf44a71e148
+>>>>>>>> Stashed changes:Assets/Sprites/npc/Frog.controller.meta
+=======
+guid: 67206281b44eab340930cf5b6f04e7f5
+>>>>>>> Stashed changes:Assets/Sprites/npc/Rene/Toad_Static_0.controller.meta
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 9100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
