@@ -838,6 +838,7 @@ MonoBehaviour:
   gameOverSceneName: GameOver
   pauseMenu: {fileID: 7969940321721897537}
   pausePanel: {fileID: 0}
+  canPause: 1
 --- !u!1 &7969940321721897537
 GameObject:
   m_ObjectHideFlags: 0
@@ -855,7 +856,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &7969940321721897536
 RectTransform:
   m_ObjectHideFlags: 0

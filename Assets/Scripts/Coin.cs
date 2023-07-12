@@ -9,8 +9,8 @@ public class Coin : MonoBehaviour
 
     [SerializeField] private int cantidadMonedas;
 
-    // Referencia al GameObject del jugador
-    public GameObject jugador;
+    // Referencia al GameObject del CollisionNormal
+    public GameObject CollisionNormal;    
 
     void Start()
     {
@@ -24,19 +24,19 @@ public class Coin : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        // Verifica si el objeto que colisionó es el collider deseado adjunto al jugador
-        if(collision.gameObject == jugador)
+        // Verifica si el objeto que colisionó es el collider deseado adjunto al CollisionNormal
+        if (collision.gameObject == CollisionNormal)
         {
             if (sumaMoneda != null)
             {
                 SumarMoneda();
-                Destroy(this.gameObject);
-            }  
+                Destroy(gameObject);
+            }
         }
     }
 
     private void SumarMoneda()
     {
-        sumaMoneda(cantidadMonedas);
+        sumaMoneda?.Invoke(cantidadMonedas);
     }
 }

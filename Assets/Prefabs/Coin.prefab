@@ -124,7 +124,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.5, y: 2.34}
+    oldSize: {x: 1.25, y: 1.95}
     newSize: {x: 1.171875, y: 1.828125}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -146,4 +146,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cantidadMonedas: 1
-  jugador: {fileID: 0}
+  CollisionNormal: {fileID: 0}

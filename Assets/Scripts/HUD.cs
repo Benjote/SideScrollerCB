@@ -10,8 +10,9 @@ public class HUD : MonoBehaviour
     public TextMeshProUGUI puntos;
     [SerializeField] private List<GameObject> listaCorazones;
     [SerializeField] private Sprite corazonDesactivado;
-    private int totalMonedas;
     [SerializeField] private TMP_Text textoMonedas;
+
+    private int totalMonedas;    
 
     void Start()
     {
