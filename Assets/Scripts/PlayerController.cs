@@ -29,7 +29,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private GameObject collisionNormal;
     [SerializeField] private GameObject collisionClimb;
     [SerializeField] HUD HUD;
-    [SerializeField] private BoxCollider2D colAttack;
+    [SerializeField] private BoxCollider2D PlayerAttack;
 
     void Start()
     {
@@ -48,12 +48,12 @@ public class PlayerController : MonoBehaviour
 
         if (moveInput < 0)
         {
-            colAttack.offset = new Vector2(-posColX, posColY);
+            PlayerAttack.offset = new Vector2(-posColX, posColY);
             spriteRenderer.flipX = true;
         }
         else if (moveInput > 0)
         {
-            colAttack.offset = new Vector2(posColX, posColY);
+            PlayerAttack.offset = new Vector2(posColX, posColY);
             spriteRenderer.flipX = false;
         }
 

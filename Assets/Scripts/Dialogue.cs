@@ -20,6 +20,9 @@ public class Dialogue : MonoBehaviour
     private bool didDialogueStart;
     private int lineIndex;
 
+    // Referencia al GameObject del jugador
+    public GameObject jugador;
+
     private void Start()
     {
         audioSource = GetComponent<AudioSource>();
@@ -72,24 +75,14 @@ public class Dialogue : MonoBehaviour
         }
     }
 
-
     private void SelectAudioClip()
     {
-        if(lineIndex != 0)
+        if (lineIndex != 0)
         {
             isPlayerTalking = !isPlayerTalking;
         }
 
         audioSource.clip = isPlayerTalking ? playerVoice : npcVoice;
-
-        /*if (isPlayerTalking)
-        {
-            audioSource.clip = playerVoice;
-        }
-        else
-        {
-            audioSource.clip = npcVoice;
-        }*/
     }
 
     private IEnumerator ShowLine()
@@ -114,7 +107,7 @@ public class Dialogue : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject == jugador)
         {
             isPlayerInRange = true;
             dialogueMark.SetActive(true);
@@ -123,7 +116,7 @@ public class Dialogue : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject == jugador)
         {
             isPlayerInRange = false;
             dialogueMark.SetActive(false);
