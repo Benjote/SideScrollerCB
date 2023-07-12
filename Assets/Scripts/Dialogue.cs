@@ -4,16 +4,27 @@ using TMPro;
 
 public class Dialogue : MonoBehaviour
 {
+    [SerializeField] private AudioClip npcVoice;
+    [SerializeField] private AudioClip playerVoice;
+    [SerializeField] private float typingTime;
+    [SerializeField] private int charsToPlaySound;
+    [SerializeField] private bool isPlayerTalking;
+
     [SerializeField] private GameObject dialogueMark;
     [SerializeField] private GameObject dialoguePanel;
     [SerializeField] private TMP_Text dialogueText;
     [SerializeField, TextArea(4, 6)] private string[] dialogueLines;
 
-    private float typingTime = 0.05f;
-
+    private AudioSource audioSource;
     private bool isPlayerInRange;
     private bool didDialogueStart;
     private int lineIndex;
+
+    private void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+        audioSource.clip = npcVoice;
+    }
 
     private void Update()
     {
@@ -61,13 +72,42 @@ public class Dialogue : MonoBehaviour
         }
     }
 
+
+    private void SelectAudioClip()
+    {
+        if(lineIndex != 0)
+        {
+            isPlayerTalking = !isPlayerTalking;
+        }
+
+        audioSource.clip = isPlayerTalking ? playerVoice : npcVoice;
+
+        /*if (isPlayerTalking)
+        {
+            audioSource.clip = playerVoice;
+        }
+        else
+        {
+            audioSource.clip = npcVoice;
+        }*/
+    }
+
     private IEnumerator ShowLine()
     {
+        SelectAudioClip();
         dialogueText.text = string.Empty;
+        int charIndex = 0;
 
         foreach (char ch in dialogueLines[lineIndex])
         {
             dialogueText.text += ch;
+
+            if (charIndex % charsToPlaySound == 0)
+            {
+                audioSource.Play();
+            }
+
+            charIndex++;
             yield return new WaitForSecondsRealtime(typingTime);
         }
     }
