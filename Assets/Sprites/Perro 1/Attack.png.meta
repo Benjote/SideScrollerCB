@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 91ae8b9bec91b4b459c13a161711f100
+guid: b01770c5fa44ccb4192db16df9bb60e6
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 20
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -105,13 +105,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: duolingo_0
+      name: Attack_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 96
-        width: 19
-        height: 21
+        x: 4
+        y: 0
+        width: 29
+        height: 31
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -119,20 +119,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cf86613869c3713408431f1749ee94a8
-      internalID: 1100867198
+      spriteID: 0f2406e385bdef44fa8ce66815af4d55
+      internalID: -216407446
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: duolingo_1
+      name: Attack_1
       rect:
         serializedVersion: 2
-        x: 22
-        y: 97
-        width: 19
-        height: 20
+        x: 53
+        y: 0
+        width: 31
+        height: 31
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,20 +140,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: db4544df51e7c374e81576c294a4f4a1
-      internalID: -919577181
+      spriteID: d71755e058450fc4c8454f68c8a3955c
+      internalID: 1563328300
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: duolingo_2
+      name: Attack_2
       rect:
         serializedVersion: 2
-        x: 0
-        y: 74
-        width: 19
-        height: 19
+        x: 101
+        y: 0
+        width: 37
+        height: 31
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -161,20 +161,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e4f70e327b0878c4fba30644a47f9e3c
-      internalID: 278000256
+      spriteID: 18ac8d131987fe8468d59796e9436e1f
+      internalID: -1439013124
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: duolingo_3
+      name: Attack_4
       rect:
         serializedVersion: 2
-        x: 2
-        y: 47
-        width: 21
-        height: 19
+        x: 148
+        y: 0
+        width: 40
+        height: 31
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -182,113 +182,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 98714282a746be046a864f17698ef848
-      internalID: 1958052279
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: duolingo_4
-      rect:
-        serializedVersion: 2
-        x: 23
-        y: 74
-        width: 19
-        height: 19
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e440b7be40ede0a46a8120f779788628
-      internalID: -1025837717
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: duolingo_5
-      rect:
-        serializedVersion: 2
-        x: 29
-        y: 48
-        width: 23
-        height: 18
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d6c8826578262514393c2ccd48666d59
-      internalID: 1783522661
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: duolingo_6
-      rect:
-        serializedVersion: 2
-        x: 46
-        y: 74
-        width: 19
-        height: 19
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 96726bbf70f1c8b41966fdb925d2edf6
-      internalID: -482939603
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: duolingo_7
-      rect:
-        serializedVersion: 2
-        x: 69
-        y: 75
-        width: 19
-        height: 18
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e95bcb37ab5aa46479e2e7e6befc2127
-      internalID: -1674743244
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: duolingo_8
-      rect:
-        serializedVersion: 2
-        x: 90
-        y: 74
-        width: 22
-        height: 20
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 58739ed6385bf1548a8a004b09c3dc4d
-      internalID: 1619774554
+      spriteID: 6b95b29315924d44c8543e3d448cb766
+      internalID: 482687527
       vertices: []
       indices: 
       edges: []
@@ -304,15 +199,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      duolingo_8: 1619774554
-      duolingo_1: -919577181
-      duolingo_2: 278000256
-      duolingo_4: -1025837717
-      duolingo_5: 1783522661
-      duolingo_3: 1958052279
-      duolingo_0: 1100867198
-      duolingo_6: -482939603
-      duolingo_7: -1674743244
+      Attack_0: -216407446
+      Attack_4: 482687527
+      Attack_2: -1439013124
+      Attack_1: 1563328300
+      Attack_3: -1780803907
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

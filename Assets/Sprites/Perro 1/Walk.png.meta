@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 91ae8b9bec91b4b459c13a161711f100
+guid: 27f7681b98007dc4ab4a25e3097834bc
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 20
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -105,13 +105,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: duolingo_0
+      name: Walk_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 96
-        width: 19
-        height: 21
+        x: 3
+        y: 0
+        width: 40
+        height: 27
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -119,20 +119,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cf86613869c3713408431f1749ee94a8
-      internalID: 1100867198
+      spriteID: 64dacef37610a9140bc1566d08259c38
+      internalID: 1892946593
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: duolingo_1
+      name: Walk_1
       rect:
         serializedVersion: 2
-        x: 22
-        y: 97
-        width: 19
-        height: 20
+        x: 53
+        y: 0
+        width: 38
+        height: 28
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,20 +140,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: db4544df51e7c374e81576c294a4f4a1
-      internalID: -919577181
+      spriteID: 1f46c93feaaa3474e8a51cf631d04950
+      internalID: -1279154890
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: duolingo_2
+      name: Walk_2
       rect:
         serializedVersion: 2
-        x: 0
-        y: 74
-        width: 19
-        height: 19
+        x: 103
+        y: 1
+        width: 36
+        height: 28
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -161,20 +161,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e4f70e327b0878c4fba30644a47f9e3c
-      internalID: 278000256
+      spriteID: f6ba7419de28e3f4e947b962b09d62e1
+      internalID: -536932669
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: duolingo_3
+      name: Walk_3
       rect:
         serializedVersion: 2
-        x: 2
-        y: 47
-        width: 21
-        height: 19
+        x: 152
+        y: 0
+        width: 35
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -182,20 +182,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 98714282a746be046a864f17698ef848
-      internalID: 1958052279
+      spriteID: 538b75f1f48d5774ab19eb3919aebd75
+      internalID: 2114661309
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: duolingo_4
+      name: Walk_4
       rect:
         serializedVersion: 2
-        x: 23
-        y: 74
-        width: 19
-        height: 19
+        x: 192
+        y: 0
+        width: 43
+        height: 28
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -203,20 +203,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e440b7be40ede0a46a8120f779788628
-      internalID: -1025837717
+      spriteID: 451490534dfd1db499c442c8d27b2a8d
+      internalID: 1011550616
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: duolingo_5
+      name: Walk_5
       rect:
         serializedVersion: 2
-        x: 29
-        y: 48
-        width: 23
-        height: 18
+        x: 241
+        y: 0
+        width: 42
+        height: 27
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -224,71 +224,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d6c8826578262514393c2ccd48666d59
-      internalID: 1783522661
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: duolingo_6
-      rect:
-        serializedVersion: 2
-        x: 46
-        y: 74
-        width: 19
-        height: 19
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 96726bbf70f1c8b41966fdb925d2edf6
-      internalID: -482939603
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: duolingo_7
-      rect:
-        serializedVersion: 2
-        x: 69
-        y: 75
-        width: 19
-        height: 18
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e95bcb37ab5aa46479e2e7e6befc2127
-      internalID: -1674743244
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: duolingo_8
-      rect:
-        serializedVersion: 2
-        x: 90
-        y: 74
-        width: 22
-        height: 20
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 58739ed6385bf1548a8a004b09c3dc4d
-      internalID: 1619774554
+      spriteID: 583adb7804309714dbad0ab3c0b5a102
+      internalID: 1199575164
       vertices: []
       indices: 
       edges: []
@@ -304,15 +241,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      duolingo_8: 1619774554
-      duolingo_1: -919577181
-      duolingo_2: 278000256
-      duolingo_4: -1025837717
-      duolingo_5: 1783522661
-      duolingo_3: 1958052279
-      duolingo_0: 1100867198
-      duolingo_6: -482939603
-      duolingo_7: -1674743244
+      Walk_5: 1199575164
+      Walk_0: 1892946593
+      Walk_4: 1011550616
+      Walk_2: -536932669
+      Walk_3: 2114661309
+      Walk_1: -1279154890
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
