@@ -117,7 +117,7 @@ public class PlayerController : MonoBehaviour
             CausarHerida();
         }
 
-        if (Input.GetKey(KeyCode.E) && canAttack)
+        if (Input.GetKeyDown(KeyCode.E) && canAttack)
         {
             animator.SetTrigger("Attack");
             canAttack = false;

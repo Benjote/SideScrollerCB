@@ -27,9 +27,10 @@ public class Coin : MonoBehaviour
         {
             if (sumaMoneda != null)
             {
-                SumarMoneda();
                 ReproducirSonido();
-                Destroy(gameObject);
+                SumarMoneda();
+                Invoke("DestroyLater", 0.2f);
+                this.enabled = false;
             }
         }
     }
@@ -42,5 +43,9 @@ public class Coin : MonoBehaviour
     private void ReproducirSonido()
     {
         audioSource.PlayOneShot(sonidoMoneda);
+    }
+
+    private void DestroyLater() {
+        Destroy(gameObject);
     }
 }
