@@ -222,9 +222,11 @@ MonoBehaviour:
     m_Bits: 8
   jumpForce: 6
   verticalSpeed: 5
+  vidaPersonaje: 3
   pwc: {fileID: 8938078038670475563}
   collisionNormal: {fileID: 8938078039444512069}
   collisionClimb: {fileID: 8938078039626180265}
+  collisionDead: {fileID: 0}
   HUD: {fileID: 0}
   playerAttack: {fileID: 6699668152953387589}
   attackCooldown: 1

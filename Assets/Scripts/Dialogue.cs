@@ -31,7 +31,7 @@ public class Dialogue : MonoBehaviour
 
     private void Update()
     {
-        if (isPlayerInRange && Input.GetButtonDown("Fire1"))
+        if (isPlayerInRange && Input.GetKeyDown(KeyCode.Return))
         {
             if (!didDialogueStart)
             {
