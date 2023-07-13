@@ -1,9 +1,5 @@
 fileFormatVersion: 2
-<<<<<<<< Updated upstream:Assets/Enemigos/Perro 1/Attack.jpg.meta
-guid: 55b2460e6f63c7541830eb0ab5f9431d
-========
-guid: 3c4ac6c25bd85524da518514e5201a99
->>>>>>>> Stashed changes:Assets/Sprites/Perro 1/Hurt.png.meta
+guid: b714e09d27fb0ff4bb2fcabbd551bcde
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -37,12 +33,12 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
-    wrapU: 0
-    wrapV: 0
-    wrapW: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -74,7 +70,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
