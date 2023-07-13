@@ -12,35 +12,43 @@ public class PlayerController : MonoBehaviour
     public LayerMask groundLayer;
     public float jumpForce = 5f;
     public float verticalSpeed = 5f;
-    private int vidaPersonaje = 3;
+    public event System.Action OnPlayerDeath;
+
+    [SerializeField] private int vidaPersonaje = 3; // Variable de vida visible en el Inspector
 
     private Rigidbody2D rb;
     private SpriteRenderer spriteRenderer;
+    private bool canAttack = true;
     private Animator animator;
     private bool isGrounded;
     private bool isJumping;
     private bool isRunning;
     private bool isFalling;
-    private float posColX = 1;
-    private float posColY = 0;
+    private bool isFrozen; // Variable para indicar si el jugador está congelado
+    private float posColX = 3.110583f;
+    private float posColY = -2.440398f;
 
     public PlayerWallClimb pwc;
 
     [SerializeField] private GameObject collisionNormal;
     [SerializeField] private GameObject collisionClimb;
-    [SerializeField] HUD HUD;
-    [SerializeField] private BoxCollider2D PlayerAttack;
+    [SerializeField] private GameObject collisionDead; // Nuevo GameObject para la colisión cuando el personaje está muerto
+    [SerializeField] private HUD HUD;
+    [SerializeField] private BoxCollider2D playerAttack;
 
-    void Start()
+    [SerializeField] private float attackCooldown = 1f;
+
+    private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
     }
 
-    void Update()
+    private void Update()
     {
- 
+        if (isFrozen) // Si el jugador está congelado, no se procesan las entradas de movimiento
+            return;
 
         float moveInput = Input.GetAxisRaw("Horizontal");
 
@@ -48,12 +56,14 @@ public class PlayerController : MonoBehaviour
 
         if (moveInput < 0)
         {
-            PlayerAttack.offset = new Vector2(-posColX, posColY);
+            playerAttack.offset = new Vector2(1.443688f, -2.440398f);
+            playerAttack.size = new Vector2(1.404423f, 1.495153f);
             spriteRenderer.flipX = true;
         }
         else if (moveInput > 0)
         {
-            PlayerAttack.offset = new Vector2(posColX, posColY);
+            playerAttack.offset = new Vector2(posColX, posColY);
+            playerAttack.size = new Vector2(1f, playerAttack.size.y);
             spriteRenderer.flipX = false;
         }
 
@@ -101,32 +111,35 @@ public class PlayerController : MonoBehaviour
                 }
             }
         }
-        
-        if(Input.GetKeyDown(KeyCode.K))
+
+        if (Input.GetKeyDown(KeyCode.K))
         {
             CausarHerida();
-        }  
+        }
 
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && canAttack)
         {
             animator.SetTrigger("Attack");
-        }     
+            canAttack = false;
+            StartCoroutine(EnableAttackAfterCooldown());
+        }
     }
-
-
 
     private void FixedUpdate()
     {
+        if (isFrozen) // Si el jugador está congelado, no se aplica velocidad al Rigidbody
+            return;
+
         float moveInput = Input.GetAxisRaw("Horizontal");
         rb.velocity = new Vector2(moveInput * GetSpeed() * runSpeedMultiplier, rb.velocity.y);
     }
 
-    float GetSpeed()
+    private float GetSpeed()
     {
         return isRunning ? speed * runSpeedMultiplier : speed;
     }
 
-    bool IsGroundWithTag()
+    private bool IsGroundWithTag()
     {
         Collider2D[] colliders = Physics2D.OverlapBoxAll(groundC.position, groundCheckSize, 0f);
         foreach (Collider2D collider in colliders)
@@ -137,6 +150,12 @@ public class PlayerController : MonoBehaviour
             }
         }
         return false;
+    }
+
+    private IEnumerator EnableAttackAfterCooldown()
+    {
+        yield return new WaitForSeconds(attackCooldown);
+        canAttack = true;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -159,6 +178,15 @@ public class PlayerController : MonoBehaviour
             collisionNormal.SetActive(false);
             collisionClimb.SetActive(true);
         }
+
+        if (collision.collider.gameObject.tag == "Obstacle" && vidaPersonaje <= 0)
+        {
+            isFrozen = true; // Congelamos al jugador cuando la vida llega a 0
+            collisionNormal.SetActive(false);
+            collisionClimb.SetActive(false);
+            collisionDead.SetActive(true);
+            OnPlayerDeath?.Invoke(); // Invocar el evento OnPlayerDeath si está suscrito a algún método
+        }
     }
 
     private void OnDrawGizmosSelected()
@@ -170,7 +198,6 @@ public class PlayerController : MonoBehaviour
         Gizmos.DrawWireCube(groundC.position, new Vector3(groundCheckSize.x, groundCheckSize.y, 0f));
     }
 
-    // Método llamado desde el evento de animación en el último frame de la animación "Fall"
     public void OnFallAnimationEnd()
     {
         if (isFalling)
@@ -184,14 +211,14 @@ public class PlayerController : MonoBehaviour
     {
         if (vidaPersonaje > 0)
         {
-            vidaPersonaje --;
+            vidaPersonaje--;
             HUD.RestaCorazones(vidaPersonaje);
             if (vidaPersonaje == 0)
             {
+                animator.SetTrigger("Die");
+                isFrozen = true; // Congelamos al jugador cuando la vida llega a 0
                 Debug.Log("Has muerto");
             }
         }
     }
-
-
 }

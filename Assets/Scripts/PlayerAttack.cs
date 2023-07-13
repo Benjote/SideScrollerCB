@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerAttack : MonoBehaviour
 {
 
-    private EnemyDeath enemyDeath;
+    //private EnemyDeath enemyDeath;
     private BoxCollider2D colAttack;
 
     private void Awake()
@@ -22,7 +22,7 @@ public class PlayerAttack : MonoBehaviour
         if (other.CompareTag("Enemy"))
         {
             Destroy(other.gameObject);
-            enemyDeath.TakeDamage();
+            //enemyDeath.TakeDamage();
         }
     }
 }
