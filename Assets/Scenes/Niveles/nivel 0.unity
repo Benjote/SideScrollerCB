@@ -633,7 +633,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1325167354279942018, guid: a217b014fe3b2a747a576d6197e99012, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0.00012207031
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1325167354279942018, guid: a217b014fe3b2a747a576d6197e99012, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -1827,7 +1827,7 @@ PrefabInstance:
       objectReference: {fileID: 959489151}
     - target: {fileID: 4443731645943765174, guid: 20a43b765991e814eab329ed3352fbf1, type: 3}
       propertyPath: m_Name
-      value: Coin (4)
+      value: Coin
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 20a43b765991e814eab329ed3352fbf1, type: 3}
