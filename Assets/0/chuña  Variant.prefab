@@ -1,0 +1,205 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &5311496105856084293
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7334624708671215210, guid: b6bd0cf2ce4305d428c3bf0d9e188928, type: 3}
+      propertyPath: dialogueText
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7334624708671215210, guid: b6bd0cf2ce4305d428c3bf0d9e188928, type: 3}
+      propertyPath: dialoguePanel
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7334624708671215216, guid: b6bd0cf2ce4305d428c3bf0d9e188928, type: 3}
+      propertyPath: m_Name
+      value: "chu\xF1a "
+      objectReference: {fileID: 0}
+    - target: {fileID: 7334624708671215221, guid: b6bd0cf2ce4305d428c3bf0d9e188928, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7334624708671215221, guid: b6bd0cf2ce4305d428c3bf0d9e188928, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 6.81
+      objectReference: {fileID: 0}
+    - target: {fileID: 7334624708671215221, guid: b6bd0cf2ce4305d428c3bf0d9e188928, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 15.54
+      objectReference: {fileID: 0}
+    - target: {fileID: 7334624708671215221, guid: b6bd0cf2ce4305d428c3bf0d9e188928, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7334624708671215221, guid: b6bd0cf2ce4305d428c3bf0d9e188928, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7334624708671215221, guid: b6bd0cf2ce4305d428c3bf0d9e188928, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7334624708671215221, guid: b6bd0cf2ce4305d428c3bf0d9e188928, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7334624708671215221, guid: b6bd0cf2ce4305d428c3bf0d9e188928, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7334624708671215221, guid: b6bd0cf2ce4305d428c3bf0d9e188928, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7334624708671215221, guid: b6bd0cf2ce4305d428c3bf0d9e188928, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7334624708671215221, guid: b6bd0cf2ce4305d428c3bf0d9e188928, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7334624708671215223, guid: b6bd0cf2ce4305d428c3bf0d9e188928, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 7334624708671215210, guid: b6bd0cf2ce4305d428c3bf0d9e188928, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: b6bd0cf2ce4305d428c3bf0d9e188928, type: 3}
+--- !u!1 &3206540800904888694 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7334624707122538547, guid: b6bd0cf2ce4305d428c3bf0d9e188928, type: 3}
+  m_PrefabInstance: {fileID: 5311496105856084293}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &3206540802558443317 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7334624708671215216, guid: b6bd0cf2ce4305d428c3bf0d9e188928, type: 3}
+  m_PrefabInstance: {fileID: 5311496105856084293}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &1025406329
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3206540802558443317}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &1025406324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3206540802558443317}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d76494e42ec444d44864d16be8b28b1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  npcVoice: {fileID: 8300000, guid: 10931abc075293548a7384f2d938f6b6, type: 3}
+  playerVoice: {fileID: 8300000, guid: 01bf4fe5f2e1f0442984a231de303b4e, type: 3}
+  typingTime: 0.04
+  charsToPlaySound: 3
+  isPlayerTalking: 0
+  dialogueMark: {fileID: 3206540800904888694}
+  dialoguePanel: {fileID: 0}
+  dialogueText: {fileID: 0}
+  dialogueLines:
+  - "Chu\xF1a: Hello, little kitten! Congrats on reaching the top!"
+  - 'Kittie: Meow.'
+  - "Chu\xF1a: Hahaha, what a cutie tiny kittie!"
+  - 'Kittie: Meow.'
+  sceneToLoad: nivel 1
+  jugador: {fileID: 0}

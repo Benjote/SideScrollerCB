@@ -1,20 +1,36 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class ChuñaDialogue : MonoBehaviour
 {
+    [SerializeField] private float delayBeforeSceneChange = 1f;
+    [SerializeField] private AudioClip npcVoice;
+    [SerializeField] private AudioClip playerVoice;
+    [SerializeField] private float typingTime;
+    [SerializeField] private int charsToPlaySound;
+    [SerializeField] private bool isPlayerTalking;
     [SerializeField] private GameObject dialogueMark;
-    [SerializeField] private GameObject dialoguePanel;
-    [SerializeField] private TMPro.TMP_Text dialogueText;
-    [SerializeField, TextArea(4, 6)] private string[] dialogueLines;
     [SerializeField] private string sceneToLoad;
+    [SerializeField] private GameObject dialoguePanel;
+    [SerializeField] private TMP_Text dialogueText;
+    [SerializeField, TextArea(4, 6)] private string[] dialogueLines;
+    
 
+    private AudioSource audioSource;
     private bool isPlayerInRange;
     private bool didDialogueStart;
     private int lineIndex;
 
-    public GameObject jugador; // Referencia al objeto jugador
+    // Referencia al GameObject del jugador
+    public GameObject jugador;
+
+    private void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+        audioSource.clip = npcVoice;
+    }
 
     private void Update()
     {
@@ -59,30 +75,49 @@ public class ChuñaDialogue : MonoBehaviour
             dialoguePanel.SetActive(false);
             dialogueMark.SetActive(true);
             Time.timeScale = 1f;
-            StartCoroutine(LoadSceneAfterDelay());
+            StartCoroutine(LoadSceneAfterDelay(delayBeforeSceneChange));
         }
+    }
+
+    private void SelectAudioClip()
+    {
+        if (lineIndex != 0)
+        {
+            isPlayerTalking = !isPlayerTalking;
+        }
+
+        audioSource.clip = isPlayerTalking ? playerVoice : npcVoice;
     }
 
     private IEnumerator ShowLine()
     {
+        SelectAudioClip();
         dialogueText.text = string.Empty;
+        int charIndex = 0;
 
         foreach (char ch in dialogueLines[lineIndex])
         {
             dialogueText.text += ch;
-            yield return new WaitForSeconds(0.05f);
+
+            if (charIndex % charsToPlaySound == 0)
+            {
+                audioSource.Play();
+            }
+
+            charIndex++;
+            yield return new WaitForSecondsRealtime(typingTime);
         }
     }
 
-    private IEnumerator LoadSceneAfterDelay()
+    private IEnumerator LoadSceneAfterDelay(float delay)
     {
-        yield return new WaitForSeconds(1f); // Delay opcional antes de cambiar de escena
+        yield return new WaitForSeconds(delay);
         SceneManager.LoadScene(sceneToLoad);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject == jugador && !didDialogueStart)
+        if (collision.gameObject == jugador)
         {
             isPlayerInRange = true;
             dialogueMark.SetActive(true);
