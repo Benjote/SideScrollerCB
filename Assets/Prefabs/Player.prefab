@@ -171,9 +171,9 @@ GameObject:
   - component: {fileID: 627096370010501922}
   - component: {fileID: 5559485861827455011}
   - component: {fileID: 6118479975462406389}
-  - component: {fileID: 2954389912533624267}
   - component: {fileID: 7875950234754011902}
   - component: {fileID: 2507614090885677589}
+  - component: {fileID: 5021049413422580516}
   - component: {fileID: 6611007004366309235}
   m_Layer: 0
   m_Name: Player
@@ -275,20 +275,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &2954389912533624267
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5075938997633526645}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3122b48c808cbed4198eb6cf8a745e10, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  deathLimit: -26
-  CanvasGO: {fileID: 4855808572741343877, guid: e3117948bb662f0419ff9d60ad902d5b, type: 3}
 --- !u!114 &7875950234754011902
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -318,6 +304,7 @@ MonoBehaviour:
   collisionDead: {fileID: 3589822429272791615}
   HUD: {fileID: 0}
   playerAttack: {fileID: 6495147080476819733}
+  canvasGameOver: {fileID: 0}
   attackCooldown: 1
 --- !u!114 &2507614090885677589
 MonoBehaviour:
@@ -339,6 +326,21 @@ MonoBehaviour:
   collisionNormal: {fileID: 7340917868168834409}
   collisionClimb: {fileID: 8257819619253093680}
   ignoreFirstSeconds: 0.03
+--- !u!114 &5021049413422580516
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5075938997633526645}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a64b800a212f4844b1857f97df2d003, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pauseMenu: {fileID: 0}
+  pausePanel: {fileID: 0}
+  canPause: 1
 --- !u!95 &6611007004366309235
 Animator:
   serializedVersion: 5

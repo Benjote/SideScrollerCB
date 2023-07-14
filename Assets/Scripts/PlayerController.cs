@@ -12,13 +12,11 @@ public class PlayerController : MonoBehaviour
     public LayerMask groundLayer;
     public float jumpForce = 5f;
     public float verticalSpeed = 5f;
-    public event System.Action OnPlayerDeath;
 
     [SerializeField] private int vidaPersonaje = 3; // Variable de vida visible en el Inspector
 
     private Rigidbody2D rb;
     private SpriteRenderer spriteRenderer;
-    private bool canAttack = true;
     private Animator animator;
     private bool isGrounded;
     private bool isJumping;
@@ -35,14 +33,19 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private GameObject collisionDead; // Nuevo GameObject para la colisión cuando el personaje está muerto
     [SerializeField] private HUD HUD;
     [SerializeField] private BoxCollider2D playerAttack;
+    [SerializeField] private GameObject canvasGameOver; // Referencia al canvas de Game Over
 
     [SerializeField] private float attackCooldown = 1f;
+
+    public event System.Action OnPlayerDeath;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
+
+        canvasGameOver.SetActive(false); // Desactivar el canvas de Game Over al iniciar el juego
     }
 
     private void Update()
@@ -117,10 +120,9 @@ public class PlayerController : MonoBehaviour
             CausarHerida();
         }
 
-        if (Input.GetKeyDown(KeyCode.E) && canAttack)
+        if (Input.GetKeyDown(KeyCode.E))
         {
             animator.SetTrigger("Attack");
-            canAttack = false;
             StartCoroutine(EnableAttackAfterCooldown());
         }
     }
@@ -155,7 +157,6 @@ public class PlayerController : MonoBehaviour
     private IEnumerator EnableAttackAfterCooldown()
     {
         yield return new WaitForSeconds(attackCooldown);
-        canAttack = true;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -179,13 +180,9 @@ public class PlayerController : MonoBehaviour
             collisionClimb.SetActive(true);
         }
 
-        if (collision.collider.gameObject.tag == "Obstacle" && vidaPersonaje <= 0)
+        if (collision.collider.gameObject.tag == "Obstacle")
         {
-            isFrozen = true; // Congelamos al jugador cuando la vida llega a 0
-            collisionNormal.SetActive(false);
-            collisionClimb.SetActive(false);
-            collisionDead.SetActive(true);
-            OnPlayerDeath?.Invoke(); // Invocar el evento OnPlayerDeath si está suscrito a algún método
+            CausarHerida();
         }
     }
 
@@ -213,11 +210,19 @@ public class PlayerController : MonoBehaviour
         {
             vidaPersonaje--;
             HUD.RestaCorazones(vidaPersonaje);
+
             if (vidaPersonaje == 0)
             {
                 animator.SetTrigger("Die");
-                isFrozen = true; // Congelamos al jugador cuando la vida llega a 0
+                isFrozen = true; // Congelar el jugador cuando la vida llega a 0
                 Debug.Log("Has muerto");
+                OnPlayerDeath?.Invoke(); // Invocar el evento OnPlayerDeath si está suscrito a algún método
+                canvasGameOver.SetActive(true); // Mostrar el canvas de Game Over
+                Time.timeScale = 0f; // Congelar el juego estableciendo la escala de tiempo en 0
+            }
+            else
+            {
+                animator.SetTrigger("Hurt"); // Activar la animación de herida
             }
         }
     }

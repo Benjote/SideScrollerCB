@@ -5,20 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    /*public int PuntosTotales { get  { return puntosTotales;  } }
-    private int puntosTotales;
-    public void SumarPuntos(int puntosASumar)
-    {
-        puntosTotales = puntosTotales + puntosASumar;
-        Debug.Log(puntosTotales);
-    } */
     public static GameManager instance; // Instancia única del GameManager
-
-    public int maxHearts = 3; // Número máximo de corazones
-    public int currentHearts; // Corazones actuales
-   
-
-    public string gameOverSceneName = "GameOver"; // Nombre de la escena de Game Over
 
     private bool isPaused = false;
     public GameObject pauseMenu;
@@ -26,10 +13,16 @@ public class GameManager : MonoBehaviour
 
     public bool canPause = true; // Indica si el juego se puede pausar o no
 
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+    }
+
     private void Start()
     {
-        //currentHearts = maxHearts; // Inicializar los corazones al máximo
-
         if (!canPause)
         {
             pauseMenu.SetActive(false); // Desactivar el canvas de pausa al inicio
@@ -92,16 +85,6 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 1;
         isPaused = false;
         pausePanel.SetActive(false); // Desactivar el panel de pausa
-    }
-
-    public void TakeDamage()
-    {
-        currentHearts--; // Reducir un corazón
-
-        if (currentHearts <= 0)
-        {
-            SceneManager.LoadScene(gameOverSceneName);
-        }
     }
 
     public void Jugar()
