@@ -45,7 +45,8 @@ public class Coin : MonoBehaviour
         audioSource.PlayOneShot(sonidoMoneda);
     }
 
-    private void DestroyLater() {
+    private void DestroyLater()
+    {
         Destroy(gameObject);
     }
 }

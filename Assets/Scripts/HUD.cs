@@ -12,25 +12,42 @@ public class HUD : MonoBehaviour
     [SerializeField] private Sprite corazonDesactivado;
     [SerializeField] private TMP_Text textoMonedas;
 
-    private int totalMonedas;    
+    private int totalMonedas;
+
+    private const string MonedasPlayerPrefsKey = "TotalMonedas";
 
     void Start()
     {
         Coin.sumaMoneda += SumarMonedas;
+        // Cargar el valor guardado de las monedas al iniciar
+        totalMonedas = PlayerPrefs.GetInt(MonedasPlayerPrefsKey, 0);
+        ActualizarTextoMonedas();
+    }
+
+    void OnDestroy()
+    {
+        // Guardar el valor actual de las monedas al salir
+        PlayerPrefs.SetInt(MonedasPlayerPrefsKey, totalMonedas);
+        PlayerPrefs.Save();
     }
 
     void Update()
     {
-        
+
     }
 
     private void SumarMonedas(int moneda)
     {
         totalMonedas += moneda;
+        ActualizarTextoMonedas();
+    }
+
+    private void ActualizarTextoMonedas()
+    {
         textoMonedas.text = totalMonedas.ToString();
     }
 
-    public void RestaCorazones (int indice)
+    public void RestaCorazones(int indice)
     {
         Image imagenCorazon = listaCorazones[indice].GetComponent<Image>();
         imagenCorazon.sprite = corazonDesactivado;
