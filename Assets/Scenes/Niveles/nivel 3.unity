@@ -227,14 +227,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d76494e42ec444d44864d16be8b28b1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delayBeforeSceneChange: 1
-  npcVoice: {fileID: 0}
-  playerVoice: {fileID: 0}
-  typingTime: 0
-  charsToPlaySound: 0
+  delayBeforeSceneChange: 0.5
+  npcVoice: {fileID: 8300000, guid: 10931abc075293548a7384f2d938f6b6, type: 3}
+  playerVoice: {fileID: 8300000, guid: 01bf4fe5f2e1f0442984a231de303b4e, type: 3}
+  typingTime: 0.03
+  charsToPlaySound: 1
   isPlayerTalking: 0
   dialogueMark: {fileID: 19000507}
-  sceneToLoad: final
+  sceneToLoad: Creditos
   dialoguePanel: {fileID: 1295714145}
   dialogueText: {fileID: 723442053}
   dialogueLines:
@@ -601,6 +601,7 @@ GameObject:
   m_Component:
   - component: {fileID: 185060785}
   - component: {fileID: 185060786}
+  - component: {fileID: 185060787}
   m_Layer: 0
   m_Name: puas_6 (11)
   m_TagString: Untagged
@@ -675,6 +676,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &185060787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 185060784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a49e2ad0e07a6d44d8cb0c97471168c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageAmount: 1
+  jugador: {fileID: 1666255305}
 --- !u!1001 &291507653
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -750,6 +765,7 @@ GameObject:
   m_Component:
   - component: {fileID: 387810930}
   - component: {fileID: 387810931}
+  - component: {fileID: 387810932}
   m_Layer: 0
   m_Name: puas_6 (9)
   m_TagString: Untagged
@@ -824,6 +840,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &387810932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 387810929}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a49e2ad0e07a6d44d8cb0c97471168c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageAmount: 1
+  jugador: {fileID: 1666255305}
 --- !u!1 &410972145
 GameObject:
   m_ObjectHideFlags: 0
@@ -6557,6 +6587,7 @@ GameObject:
   m_Component:
   - component: {fileID: 607699177}
   - component: {fileID: 607699178}
+  - component: {fileID: 607699179}
   m_Layer: 0
   m_Name: puas_6 (12)
   m_TagString: Untagged
@@ -6631,6 +6662,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &607699179
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 607699176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a49e2ad0e07a6d44d8cb0c97471168c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageAmount: 1
+  jugador: {fileID: 1666255305}
 --- !u!1 &612293979
 GameObject:
   m_ObjectHideFlags: 0
@@ -6866,6 +6911,7 @@ GameObject:
   m_Component:
   - component: {fileID: 620155027}
   - component: {fileID: 620155028}
+  - component: {fileID: 620155029}
   m_Layer: 0
   m_Name: puas_6 (10)
   m_TagString: Untagged
@@ -6940,6 +6986,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &620155029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 620155026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a49e2ad0e07a6d44d8cb0c97471168c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageAmount: 1
+  jugador: {fileID: 1666255305}
 --- !u!1 &621853586
 GameObject:
   m_ObjectHideFlags: 0
@@ -7841,6 +7901,7 @@ GameObject:
   m_Component:
   - component: {fileID: 699011679}
   - component: {fileID: 699011680}
+  - component: {fileID: 699011681}
   m_Layer: 0
   m_Name: puas_6 (5)
   m_TagString: Untagged
@@ -7915,6 +7976,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &699011681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 699011678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a49e2ad0e07a6d44d8cb0c97471168c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageAmount: 1
+  jugador: {fileID: 1666255305}
 --- !u!1 &723442052
 GameObject:
   m_ObjectHideFlags: 0
@@ -9390,6 +9465,10 @@ PrefabInstance:
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 7875950234754011902, guid: 8f274022f5dee2f40b8124040ec181a3, type: 3}
+      propertyPath: HUD
+      value: 
+      objectReference: {fileID: 946318557}
+    - target: {fileID: 7875950234754011902, guid: 8f274022f5dee2f40b8124040ec181a3, type: 3}
       propertyPath: speed
       value: 6
       objectReference: {fileID: 0}
@@ -9401,6 +9480,10 @@ PrefabInstance:
       propertyPath: verticalSpeed
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 7875950234754011902, guid: 8f274022f5dee2f40b8124040ec181a3, type: 3}
+      propertyPath: canvasGameOver
+      value: 
+      objectReference: {fileID: 1379655815}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8f274022f5dee2f40b8124040ec181a3, type: 3}
 --- !u!4 &834662047 stripped
@@ -9640,6 +9723,7 @@ GameObject:
   m_Component:
   - component: {fileID: 933573616}
   - component: {fileID: 933573617}
+  - component: {fileID: 933573618}
   m_Layer: 0
   m_Name: puas_6 (1)
   m_TagString: Untagged
@@ -9714,6 +9798,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &933573618
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 933573615}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a49e2ad0e07a6d44d8cb0c97471168c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageAmount: 1
+  jugador: {fileID: 1666255305}
 --- !u!1001 &946318555
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9925,6 +10023,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &946318557 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1786839260, guid: a217b014fe3b2a747a576d6197e99012, type: 3}
+  m_PrefabInstance: {fileID: 946318555}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36dbdc8c85bbf1b47b8ad4c5a2ea228e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &951954486
@@ -10207,6 +10316,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1084166832}
   - component: {fileID: 1084166833}
+  - component: {fileID: 1084166834}
   m_Layer: 0
   m_Name: puas_6 (7)
   m_TagString: Untagged
@@ -10281,6 +10391,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1084166834
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1084166831}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a49e2ad0e07a6d44d8cb0c97471168c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageAmount: 1
+  jugador: {fileID: 1666255305}
 --- !u!1 &1092190011
 GameObject:
   m_ObjectHideFlags: 0
@@ -60875,6 +60999,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1246704376}
   - component: {fileID: 1246704377}
+  - component: {fileID: 1246704378}
   m_Layer: 0
   m_Name: puas_6 (13)
   m_TagString: Untagged
@@ -60949,6 +61074,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1246704378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1246704375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a49e2ad0e07a6d44d8cb0c97471168c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageAmount: 1
+  jugador: {fileID: 1666255305}
 --- !u!1 &1264835850
 GameObject:
   m_ObjectHideFlags: 0
@@ -61141,6 +61280,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1315233952}
   - component: {fileID: 1315233953}
+  - component: {fileID: 1315233954}
   m_Layer: 0
   m_Name: puas_6 (2)
   m_TagString: Untagged
@@ -61215,6 +61355,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1315233954
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1315233951}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a49e2ad0e07a6d44d8cb0c97471168c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageAmount: 1
+  jugador: {fileID: 1666255305}
 --- !u!1 &1371380446
 GameObject:
   m_ObjectHideFlags: 0
@@ -61285,6 +61439,108 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!1001 &1379655814
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4855808572741343877, guid: e3117948bb662f0419ff9d60ad902d5b, type: 3}
+      propertyPath: m_Name
+      value: CanvasGO
+      objectReference: {fileID: 0}
+    - target: {fileID: 4855808572741343881, guid: e3117948bb662f0419ff9d60ad902d5b, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4855808572741343881, guid: e3117948bb662f0419ff9d60ad902d5b, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4855808572741343881, guid: e3117948bb662f0419ff9d60ad902d5b, type: 3}
+      propertyPath: m_RootOrder
+      value: 21
+      objectReference: {fileID: 0}
+    - target: {fileID: 4855808572741343881, guid: e3117948bb662f0419ff9d60ad902d5b, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4855808572741343881, guid: e3117948bb662f0419ff9d60ad902d5b, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4855808572741343881, guid: e3117948bb662f0419ff9d60ad902d5b, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4855808572741343881, guid: e3117948bb662f0419ff9d60ad902d5b, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4855808572741343881, guid: e3117948bb662f0419ff9d60ad902d5b, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4855808572741343881, guid: e3117948bb662f0419ff9d60ad902d5b, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4855808572741343881, guid: e3117948bb662f0419ff9d60ad902d5b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4855808572741343881, guid: e3117948bb662f0419ff9d60ad902d5b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4855808572741343881, guid: e3117948bb662f0419ff9d60ad902d5b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4855808572741343881, guid: e3117948bb662f0419ff9d60ad902d5b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4855808572741343881, guid: e3117948bb662f0419ff9d60ad902d5b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4855808572741343881, guid: e3117948bb662f0419ff9d60ad902d5b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4855808572741343881, guid: e3117948bb662f0419ff9d60ad902d5b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4855808572741343881, guid: e3117948bb662f0419ff9d60ad902d5b, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4855808572741343881, guid: e3117948bb662f0419ff9d60ad902d5b, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4855808572741343881, guid: e3117948bb662f0419ff9d60ad902d5b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4855808572741343881, guid: e3117948bb662f0419ff9d60ad902d5b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4855808572741343881, guid: e3117948bb662f0419ff9d60ad902d5b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e3117948bb662f0419ff9d60ad902d5b, type: 3}
+--- !u!1 &1379655815 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8349194238325141375, guid: e3117948bb662f0419ff9d60ad902d5b, type: 3}
+  m_PrefabInstance: {fileID: 1379655814}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1384069230
 GameObject:
   m_ObjectHideFlags: 0
@@ -61295,6 +61551,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1384069231}
   - component: {fileID: 1384069232}
+  - component: {fileID: 1384069233}
   m_Layer: 0
   m_Name: puas_6 (6)
   m_TagString: Untagged
@@ -61369,6 +61626,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1384069233
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1384069230}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a49e2ad0e07a6d44d8cb0c97471168c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageAmount: 1
+  jugador: {fileID: 1666255305}
 --- !u!1 &1414473789
 GameObject:
   m_ObjectHideFlags: 0
@@ -61677,9 +61948,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a64b800a212f4844b1857f97df2d003, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHearts: 3
-  currentHearts: 0
-  gameOverSceneName: GameOver
   pauseMenu: {fileID: 1649387000}
   pausePanel: {fileID: 1649386999}
   canPause: 1
@@ -61773,6 +62041,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1506726417}
   - component: {fileID: 1506726418}
+  - component: {fileID: 1506726419}
   m_Layer: 0
   m_Name: puas_6 (14)
   m_TagString: Untagged
@@ -61847,6 +62116,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1506726419
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1506726416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a49e2ad0e07a6d44d8cb0c97471168c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageAmount: 1
+  jugador: {fileID: 1666255305}
 --- !u!1 &1524546006
 GameObject:
   m_ObjectHideFlags: 0
@@ -61857,6 +62140,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1524546007}
   - component: {fileID: 1524546008}
+  - component: {fileID: 1524546009}
   m_Layer: 0
   m_Name: puas_6 (15)
   m_TagString: Untagged
@@ -61931,6 +62215,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1524546009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1524546006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a49e2ad0e07a6d44d8cb0c97471168c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageAmount: 1
+  jugador: {fileID: 1666255305}
 --- !u!1 &1550702032
 GameObject:
   m_ObjectHideFlags: 0
@@ -62109,6 +62407,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1564570491}
   - component: {fileID: 1564570492}
+  - component: {fileID: 1564570493}
   m_Layer: 0
   m_Name: puas_6 (4)
   m_TagString: Untagged
@@ -62183,6 +62482,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1564570493
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1564570490}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a49e2ad0e07a6d44d8cb0c97471168c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageAmount: 1
+  jugador: {fileID: 1666255305}
 --- !u!1 &1622121952
 GameObject:
   m_ObjectHideFlags: 0
@@ -62443,6 +62756,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1702037528}
   - component: {fileID: 1702037529}
+  - component: {fileID: 1702037530}
   m_Layer: 0
   m_Name: puas_6 (3)
   m_TagString: Untagged
@@ -62517,6 +62831,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1702037530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1702037527}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a49e2ad0e07a6d44d8cb0c97471168c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageAmount: 1
+  jugador: {fileID: 1666255305}
 --- !u!1 &1781229377
 GameObject:
   m_ObjectHideFlags: 0
@@ -62753,6 +63081,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1967143931}
   - component: {fileID: 1967143932}
+  - component: {fileID: 1967143933}
   m_Layer: 0
   m_Name: puas_6 (8)
   m_TagString: Untagged
@@ -62827,6 +63156,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1967143933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1967143930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a49e2ad0e07a6d44d8cb0c97471168c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageAmount: 1
+  jugador: {fileID: 1666255305}
 --- !u!1 &2069701514
 GameObject:
   m_ObjectHideFlags: 0
