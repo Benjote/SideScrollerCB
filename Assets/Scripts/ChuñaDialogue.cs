@@ -5,6 +5,8 @@ using TMPro;
 
 public class ChuñaDialogue : MonoBehaviour
 {
+    public GameObject jugador;
+
     [SerializeField] private float delayBeforeSceneChange = 1f;
     [SerializeField] private AudioClip npcVoice;
     [SerializeField] private AudioClip playerVoice;
@@ -24,7 +26,6 @@ public class ChuñaDialogue : MonoBehaviour
     private int lineIndex;
 
     // Referencia al GameObject del jugador
-    public GameObject jugador;
 
     private void Start()
     {

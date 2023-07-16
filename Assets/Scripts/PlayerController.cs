@@ -35,7 +35,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private BoxCollider2D playerAttack;
     [SerializeField] private GameObject canvasGameOver; // Referencia al canvas de Game Over
 
-    [SerializeField] private float attackCooldown = 1f;
+    [SerializeField] private float attackCooldown = 2f;
 
     public event System.Action OnPlayerDeath;
 
