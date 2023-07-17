@@ -97,3 +97,6 @@ Temp/UnityLockfile
 Temp/FSTimeGet-f09e6a65cdee58248a7b5f07fe715ba9
 Temp/FSTimeGet-bb5466847b215854384ed3c1a258063b
 Temp/FSTimeGet-b9757c0fb5c3993489c4d23191a44c9f
+
+# Ignorar el archivo default-2021.dwlt
+UserSettings/Layouts/default-2021.dwlt
