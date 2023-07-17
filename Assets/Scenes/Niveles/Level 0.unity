@@ -79584,11 +79584,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8495980871496681283, guid: dfb0285d3ada04a47904ed3df5ff0524, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 31.304853
+      value: 17.61
       objectReference: {fileID: 0}
     - target: {fileID: 8495980871496681283, guid: dfb0285d3ada04a47904ed3df5ff0524, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.217205
+      value: 3.14
       objectReference: {fileID: 0}
     - target: {fileID: 8495980871496681283, guid: dfb0285d3ada04a47904ed3df5ff0524, type: 3}
       propertyPath: m_LocalPosition.z
@@ -79636,10 +79636,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1751433868445793908, guid: e8a7d07b7b0e6ed40949e9e91e0dae42, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6699668152953387589, guid: e8a7d07b7b0e6ed40949e9e91e0dae42, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7255985692337008391, guid: e8a7d07b7b0e6ed40949e9e91e0dae42, type: 3}
       propertyPath: HUD
       value: 
       objectReference: {fileID: 14339189}
+    - target: {fileID: 7255985692337008391, guid: e8a7d07b7b0e6ed40949e9e91e0dae42, type: 3}
+      propertyPath: attackDuration
+      value: 0.6
+      objectReference: {fileID: 0}
     - target: {fileID: 7255985692337008391, guid: e8a7d07b7b0e6ed40949e9e91e0dae42, type: 3}
       propertyPath: canvasGameOver
       value: 
@@ -79696,7 +79708,8 @@ PrefabInstance:
       propertyPath: pausePanel
       value: 
       objectReference: {fileID: 7969940320185152504}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7255985692337008390, guid: e8a7d07b7b0e6ed40949e9e91e0dae42, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: e8a7d07b7b0e6ed40949e9e91e0dae42, type: 3}
 --- !u!1001 &9136252218479435233
 PrefabInstance:

@@ -82,7 +82,6 @@ GameObject:
   - component: {fileID: 7255985692337008408}
   - component: {fileID: 7255985692337008409}
   - component: {fileID: 7255985692337008410}
-  - component: {fileID: 7255985692337008390}
   - component: {fileID: 7255985692337008391}
   - component: {fileID: 8938078038670475563}
   - component: {fileID: 7255985692337008389}
@@ -186,20 +185,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &7255985692337008390
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7255985692337008412}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3122b48c808cbed4198eb6cf8a745e10, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  deathLimit: -26
-  CanvasGO: {fileID: 4855808572741343877, guid: e3117948bb662f0419ff9d60ad902d5b, type: 3}
 --- !u!114 &7255985692337008391
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -229,6 +214,7 @@ MonoBehaviour:
   collisionDead: {fileID: 0}
   HUD: {fileID: 0}
   playerAttack: {fileID: 6699668152953387589}
+  canvasGameOver: {fileID: 0}
   attackCooldown: 1
 --- !u!114 &8938078038670475563
 MonoBehaviour:
@@ -282,9 +268,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a64b800a212f4844b1857f97df2d003, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHearts: 3
-  currentHearts: 3
-  gameOverSceneName: GameOver
   pauseMenu: {fileID: 7969940320844866494, guid: 0b2706e43bceca24a95d9cf71ccfc3dd, type: 3}
   pausePanel: {fileID: 0}
   canPause: 1

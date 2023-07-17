@@ -36,6 +36,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private GameObject canvasGameOver; // Referencia al canvas de Game Over
 
     [SerializeField] private float attackCooldown = 2f;
+    [SerializeField] private float attackDuration = 0.5f;
+    private bool isAttacking = false;
+    private bool isAttackCooldown = false;
 
     public event System.Action OnPlayerDeath;
 
@@ -122,8 +125,11 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.E))
         {
-            animator.SetTrigger("Attack");
-            StartCoroutine(EnableAttackAfterCooldown());
+            if (!isAttacking && !isAttackCooldown)
+            {
+                animator.SetTrigger("Attack");
+                StartCoroutine(EnableAttack());
+            }
         }
     }
 
@@ -154,9 +160,16 @@ public class PlayerController : MonoBehaviour
         return false;
     }
 
-    private IEnumerator EnableAttackAfterCooldown()
+    private IEnumerator EnableAttack()
     {
-        yield return new WaitForSeconds(attackCooldown);
+        isAttacking = true;
+        isAttackCooldown = true;
+        playerAttack.enabled = true;
+        yield return new WaitForSeconds(attackDuration);
+        playerAttack.enabled = false;
+        yield return new WaitForSeconds(attackCooldown - attackDuration);
+        isAttacking = false;
+        isAttackCooldown = false;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
