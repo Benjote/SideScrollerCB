@@ -199,7 +199,7 @@ GameObject:
   - component: {fileID: 164178560}
   m_Layer: 0
   m_Name: puas_6 (10)
-  m_TagString: Untagged
+  m_TagString: Pua
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -325,7 +325,7 @@ GameObject:
   - component: {fileID: 165381575}
   m_Layer: 0
   m_Name: puas_6 (23)
-  m_TagString: Untagged
+  m_TagString: Pua
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -663,7 +663,7 @@ GameObject:
   - component: {fileID: 213427649}
   m_Layer: 0
   m_Name: puas_6 (25)
-  m_TagString: Untagged
+  m_TagString: Pua
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -900,7 +900,7 @@ GameObject:
   - component: {fileID: 267797684}
   m_Layer: 0
   m_Name: puas_6 (17)
-  m_TagString: Untagged
+  m_TagString: Pua
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1026,7 +1026,7 @@ GameObject:
   - component: {fileID: 301992868}
   m_Layer: 0
   m_Name: Puas
-  m_TagString: Untagged
+  m_TagString: Pua
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1186,7 +1186,7 @@ GameObject:
   - component: {fileID: 457008507}
   m_Layer: 0
   m_Name: puas_6 (24)
-  m_TagString: Untagged
+  m_TagString: Pua
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1447,7 +1447,7 @@ GameObject:
   - component: {fileID: 485852538}
   m_Layer: 0
   m_Name: puas_6 (20)
-  m_TagString: Untagged
+  m_TagString: Pua
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1606,7 +1606,7 @@ GameObject:
   - component: {fileID: 550194530}
   m_Layer: 0
   m_Name: puas_6 (19)
-  m_TagString: Untagged
+  m_TagString: Pua
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1743,7 +1743,7 @@ GameObject:
   - component: {fileID: 609946508}
   m_Layer: 0
   m_Name: puas_6 (2)
-  m_TagString: Untagged
+  m_TagString: Pua
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2120,7 +2120,7 @@ GameObject:
   - component: {fileID: 683809060}
   m_Layer: 0
   m_Name: puas_6 (21)
-  m_TagString: Untagged
+  m_TagString: Pua
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2246,7 +2246,7 @@ GameObject:
   - component: {fileID: 707698898}
   m_Layer: 0
   m_Name: puas_6 (27)
-  m_TagString: Untagged
+  m_TagString: Pua
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3918,7 +3918,7 @@ GameObject:
   - component: {fileID: 722462152}
   m_Layer: 0
   m_Name: puas_6 (1)
-  m_TagString: Untagged
+  m_TagString: Pua
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4150,7 +4150,7 @@ GameObject:
   - component: {fileID: 735347194}
   m_Layer: 0
   m_Name: puas_6 (5)
-  m_TagString: Untagged
+  m_TagString: Pua
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4588,7 +4588,7 @@ GameObject:
   - component: {fileID: 869680743}
   m_Layer: 0
   m_Name: puas_6 (16)
-  m_TagString: Untagged
+  m_TagString: Pua
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5543,7 +5543,7 @@ GameObject:
   - component: {fileID: 999576179}
   m_Layer: 0
   m_Name: puas_6 (7)
-  m_TagString: Untagged
+  m_TagString: Pua
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6141,7 +6141,7 @@ GameObject:
   - component: {fileID: 1082270531}
   m_Layer: 0
   m_Name: puas_6 (3)
-  m_TagString: Untagged
+  m_TagString: Pua
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11494,7 +11494,7 @@ GameObject:
   - component: {fileID: 1107997474}
   m_Layer: 0
   m_Name: puas_6 (28)
-  m_TagString: Untagged
+  m_TagString: Pua
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11620,7 +11620,7 @@ GameObject:
   - component: {fileID: 1145736722}
   m_Layer: 0
   m_Name: puas_6 (22)
-  m_TagString: Untagged
+  m_TagString: Pua
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11830,7 +11830,7 @@ GameObject:
   - component: {fileID: 1188318526}
   m_Layer: 0
   m_Name: puas_6 (6)
-  m_TagString: Untagged
+  m_TagString: Pua
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12194,7 +12194,7 @@ GameObject:
   - component: {fileID: 1225612542}
   m_Layer: 0
   m_Name: puas_6 (15)
-  m_TagString: Untagged
+  m_TagString: Pua
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12320,7 +12320,7 @@ GameObject:
   - component: {fileID: 1231067023}
   m_Layer: 0
   m_Name: puas_6 (26)
-  m_TagString: Untagged
+  m_TagString: Pua
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12528,7 +12528,7 @@ GameObject:
   - component: {fileID: 1340358963}
   m_Layer: 0
   m_Name: puas_6 (9)
-  m_TagString: Untagged
+  m_TagString: Pua
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12895,7 +12895,7 @@ GameObject:
   - component: {fileID: 1487717627}
   m_Layer: 0
   m_Name: puas_6 (13)
-  m_TagString: Untagged
+  m_TagString: Pua
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13021,7 +13021,7 @@ GameObject:
   - component: {fileID: 1503397197}
   m_Layer: 0
   m_Name: puas_6 (4)
-  m_TagString: Untagged
+  m_TagString: Pua
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13147,7 +13147,7 @@ GameObject:
   - component: {fileID: 1506309347}
   m_Layer: 0
   m_Name: puas_6 (12)
-  m_TagString: Untagged
+  m_TagString: Pua
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13448,7 +13448,7 @@ GameObject:
   - component: {fileID: 1698881327}
   m_Layer: 0
   m_Name: puas_6 (14)
-  m_TagString: Untagged
+  m_TagString: Pua
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -80964,7 +80964,7 @@ GameObject:
   - component: {fileID: 1969955101}
   m_Layer: 0
   m_Name: puas_6 (18)
-  m_TagString: Untagged
+  m_TagString: Pua
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -81315,7 +81315,7 @@ GameObject:
   - component: {fileID: 2019642242}
   m_Layer: 0
   m_Name: puas_6 (8)
-  m_TagString: Untagged
+  m_TagString: Pua
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -81441,7 +81441,7 @@ GameObject:
   - component: {fileID: 2046888340}
   m_Layer: 0
   m_Name: puas_6 (11)
-  m_TagString: Untagged
+  m_TagString: Pua
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

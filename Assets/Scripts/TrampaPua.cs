@@ -4,17 +4,18 @@ public class TrampaPua : MonoBehaviour
 {
     public int damageAmount = 1; // La cantidad de daño que hará la trampa
 
-    public GameObject jugador; // Referencia al GameObject del jugador
+    private PlayerController playerController; // Referencia al componente PlayerController
+
+    private void Start()
+    {
+        playerController = FindObjectOfType<PlayerController>(); // Buscar el componente PlayerController en escena
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject == jugador)
+        if (collision.gameObject.CompareTag("Player"))
         {
-            PlayerController player = collision.GetComponent<PlayerController>();
-            if (player != null)
-            {
-                player.CausarDaño(damageAmount);
-            }
+            playerController.CausarHerida(damageAmount); // Pasar el valor de damageAmount al método CausarHerida en PlayerController
         }
     }
 }

@@ -2149,7 +2149,7 @@ GameObject:
   m_Component:
   - component: {fileID: 874816033}
   m_Layer: 0
-  m_Name: "C\xE1mara"
+  m_Name: Camera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -79512,6 +79512,10 @@ PrefabInstance:
       propertyPath: dialoguePanel
       value: 
       objectReference: {fileID: 1750839322}
+    - target: {fileID: 8085182206036982229, guid: 16e9c130a7689ee4e9aad818dce231dd, type: 3}
+      propertyPath: delayBeforeSceneChange
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 8085182207299746411, guid: 16e9c130a7689ee4e9aad818dce231dd, type: 3}
       propertyPath: m_Name
       value: "chu\xF1a "
