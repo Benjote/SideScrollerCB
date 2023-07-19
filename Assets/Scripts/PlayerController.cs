@@ -41,6 +41,7 @@ public class PlayerController : MonoBehaviour
 
     public event System.Action OnPlayerDeath;
 
+
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -197,12 +198,8 @@ public class PlayerController : MonoBehaviour
             TrampaPua trampa = collision.collider.gameObject.GetComponent<TrampaPua>();
             if (trampa != null)
             {
-                CausarHerida(trampa.damageAmount);
+                CausarDaño(); // Llama al método CausarDaño() de TrampaPua
             }
-        }
-        else if (collision.collider.gameObject.CompareTag("Obstacle"))
-        {
-            CausarHerida();
         }
     }
 
@@ -224,7 +221,30 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    public void CausarHerida(int damageAmount)
+    private void CausarHerida()
+    {
+        if (vidaPersonaje > 0)
+        {
+            vidaPersonaje--;
+            HUD.RestaCorazones(vidaPersonaje);
+
+            if (vidaPersonaje <= 0)
+            {
+                animator.SetTrigger("Die");
+                isFrozen = true; // Congelar al jugador cuando la vida llega a 0
+                Debug.Log("Has muerto");
+                OnPlayerDeath?.Invoke(); // Invocar el evento OnPlayerDeath si está suscrito a algún método
+                canvasGameOver.SetActive(true); // Mostrar el canvas de Game Over
+                Time.timeScale = 0f; // Congelar el juego estableciendo la escala de tiempo en 0
+            }
+            else
+            {
+                animator.SetTrigger("Hurt"); // Activar la animación de herida
+            }
+        }
+    }
+
+    public void CausarDaño()
     {
         if (vidaPersonaje > 0)
         {
