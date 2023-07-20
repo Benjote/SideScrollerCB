@@ -39,8 +39,10 @@ public class PlayerController : MonoBehaviour
     private bool isAttacking = false;
     private bool isAttackCooldown = false;
 
-    public event System.Action OnPlayerDeath;
+    private bool isDead; // Variable para verificar si el jugador está muerto
+    [SerializeField] private float deathCooldown = 2f; // Tiempo de cooldown después de morir
 
+    public event System.Action OnPlayerDeath;
 
     private void Start()
     {
@@ -49,6 +51,7 @@ public class PlayerController : MonoBehaviour
         animator = GetComponent<Animator>();
 
         canvasGameOver.SetActive(false); // Desactivar el canvas de Game Over al iniciar el juego
+        isDead = false; // Inicializar la variable de muerte como falsa al inicio
     }
 
     private void Update()
@@ -221,27 +224,34 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void CausarHerida()
+    public void CausarHerida()
     {
         if (vidaPersonaje > 0)
         {
             vidaPersonaje--;
             HUD.RestaCorazones(vidaPersonaje);
 
-            if (vidaPersonaje <= 0)
+            if (vidaPersonaje <= 0 && !isDead) // Agregar condición para verificar que el jugador no está muerto
             {
                 animator.SetTrigger("Die");
-                isFrozen = true; // Congelar al jugador cuando la vida llega a 0
+                isFrozen = true;
+                isDead = true; // Establecer la variable de muerte como verdadera
                 Debug.Log("Has muerto");
-                OnPlayerDeath?.Invoke(); // Invocar el evento OnPlayerDeath si está suscrito a algún método
-                canvasGameOver.SetActive(true); // Mostrar el canvas de Game Over
-                Time.timeScale = 0f; // Congelar el juego estableciendo la escala de tiempo en 0
+                OnPlayerDeath?.Invoke();
+                StartCoroutine(ShowGameOver()); // Iniciar el cooldown para mostrar el Game Over
             }
             else
             {
-                animator.SetTrigger("Hurt"); // Activar la animación de herida
+                animator.SetTrigger("Hurt");
             }
         }
+    }
+
+    private IEnumerator ShowGameOver()
+    {
+        yield return new WaitForSeconds(deathCooldown); // Esperar el tiempo de cooldown
+        canvasGameOver.SetActive(true);
+        Time.timeScale = 0f;
     }
 
     public void CausarDaño()
@@ -251,18 +261,18 @@ public class PlayerController : MonoBehaviour
             vidaPersonaje--;
             HUD.RestaCorazones(vidaPersonaje);
 
-            if (vidaPersonaje <= 0)
+            if (vidaPersonaje <= 0 && !isDead) // Agregar condición para verificar que el jugador no está muerto
             {
                 animator.SetTrigger("Die");
-                isFrozen = true; // Congelar al jugador cuando la vida llega a 0
+                isFrozen = true;
+                isDead = true; // Establecer la variable de muerte como verdadera
                 Debug.Log("Has muerto");
-                OnPlayerDeath?.Invoke(); // Invocar el evento OnPlayerDeath si está suscrito a algún método
-                canvasGameOver.SetActive(true); // Mostrar el canvas de Game Over
-                Time.timeScale = 0f; // Congelar el juego estableciendo la escala de tiempo en 0
+                OnPlayerDeath?.Invoke();
+                StartCoroutine(ShowGameOver()); // Iniciar el cooldown para mostrar el Game Over
             }
             else
             {
-                animator.SetTrigger("Hurt"); // Activar la animación de herida
+                animator.SetTrigger("Hurt");
             }
         }
     }
