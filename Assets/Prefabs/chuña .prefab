@@ -162,7 +162,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 11
-  m_Sprite: {fileID: 21300000, guid: 0a43beb79f17ed24cae5de5957c20185, type: 3}
+  m_Sprite: {fileID: 438783026, guid: 8720c4defcdeb1844b91557074ae1bf0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -190,7 +190,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.6, y: 1.6}
+    oldSize: {x: 0.6, y: 1.55}
     newSize: {x: 1.6, y: 1.6}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -231,12 +231,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d76494e42ec444d44864d16be8b28b1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  jugador: {fileID: 0}
+  delayBeforeSceneChange: 1
   npcVoice: {fileID: 8300000, guid: 10931abc075293548a7384f2d938f6b6, type: 3}
   playerVoice: {fileID: 8300000, guid: 01bf4fe5f2e1f0442984a231de303b4e, type: 3}
   typingTime: 0.04
   charsToPlaySound: 3
   isPlayerTalking: 0
   dialogueMark: {fileID: 8085182205776217128}
+  sceneToLoad: nivel 1
   dialoguePanel: {fileID: 0}
   dialogueText: {fileID: 0}
   dialogueLines:
@@ -244,8 +247,6 @@ MonoBehaviour:
   - 'Kittie: Meow.'
   - "Chu\xF1a: Hahaha, what a cutie tiny kittie!"
   - 'Kittie: Meow.'
-  sceneToLoad: nivel 1
-  jugador: {fileID: 0}
 --- !u!82 &8085182206036982232
 AudioSource:
   m_ObjectHideFlags: 0
