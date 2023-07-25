@@ -12,9 +12,8 @@ public class PlayerController : MonoBehaviour
     public LayerMask groundLayer;
     public float jumpForce = 5f;
     public float verticalSpeed = 5f;
-
     [SerializeField] private int vidaPersonaje = 3; // Variable de vida visible en el Inspector
-
+    [SerializeField] private int dañoJugador = 1; // Cantidad de daño que el jugador causa al enemigo
     private Rigidbody2D rb;
     private SpriteRenderer spriteRenderer;
     private Animator animator;
@@ -123,7 +122,7 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.K))
         {
-            CausarHerida();
+            CausarHerida(dañoJugador);
         }
 
         if (Input.GetKeyDown(KeyCode.E))
@@ -224,27 +223,32 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    public void CausarHerida()
+    public void CausarHerida(int cantidadDaño)
     {
         if (vidaPersonaje > 0)
         {
-            vidaPersonaje--;
+            vidaPersonaje -= cantidadDaño;
             HUD.RestaCorazones(vidaPersonaje);
 
-            if (vidaPersonaje <= 0 && !isDead) // Agregar condición para verificar que el jugador no está muerto
+            if (vidaPersonaje <= 0)
             {
-                animator.SetTrigger("Die");
-                isFrozen = true;
-                isDead = true; // Establecer la variable de muerte como verdadera
-                Debug.Log("Has muerto");
-                OnPlayerDeath?.Invoke();
-                StartCoroutine(ShowGameOver()); // Iniciar el cooldown para mostrar el Game Over
+                Morir();
             }
             else
             {
                 animator.SetTrigger("Hurt");
             }
         }
+    }
+
+    private void Morir()
+    {
+        isFrozen = true;
+        isDead = true;
+        animator.SetTrigger("Die");
+        Debug.Log("Has muerto");
+        OnPlayerDeath?.Invoke();
+        StartCoroutine(ShowGameOver());
     }
 
     private IEnumerator ShowGameOver()
