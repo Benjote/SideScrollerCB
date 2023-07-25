@@ -284,7 +284,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageAmount: 1
-  jugador: {fileID: 841538866}
 --- !u!61 &164178560
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -410,7 +409,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageAmount: 1
-  jugador: {fileID: 841538866}
 --- !u!61 &165381575
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -748,7 +746,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageAmount: 1
-  jugador: {fileID: 841538866}
 --- !u!61 &213427649
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -985,7 +982,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageAmount: 1
-  jugador: {fileID: 841538866}
 --- !u!61 &267797684
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1111,7 +1107,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageAmount: 1
-  jugador: {fileID: 841538866}
 --- !u!61 &301992869
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1271,7 +1266,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageAmount: 1
-  jugador: {fileID: 841538866}
 --- !u!61 &457008507
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1480,7 +1474,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageAmount: 1
-  jugador: {fileID: 841538866}
 --- !u!212 &485852537
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1691,7 +1684,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageAmount: 1
-  jugador: {fileID: 841538866}
 --- !u!61 &550194530
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1828,7 +1820,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageAmount: 1
-  jugador: {fileID: 841538866}
 --- !u!61 &609946508
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2153,7 +2144,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageAmount: 1
-  jugador: {fileID: 841538866}
 --- !u!212 &683809059
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2331,7 +2321,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageAmount: 1
-  jugador: {fileID: 841538866}
 --- !u!61 &707698898
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4003,7 +3992,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageAmount: 1
-  jugador: {fileID: 841538866}
 --- !u!61 &722462152
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4235,7 +4223,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageAmount: 1
-  jugador: {fileID: 841538866}
 --- !u!61 &735347194
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4673,7 +4660,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageAmount: 1
-  jugador: {fileID: 841538866}
 --- !u!61 &869680743
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5628,7 +5614,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageAmount: 1
-  jugador: {fileID: 841538866}
 --- !u!61 &999576179
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6226,7 +6211,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageAmount: 1
-  jugador: {fileID: 841538866}
 --- !u!61 &1082270531
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7476,8 +7460,8 @@ Tilemap:
   - first: {x: -4, y: -7, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 35
-      m_TileSpriteIndex: 18
+      m_TileIndex: 28
+      m_TileSpriteIndex: 11
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -7486,8 +7470,8 @@ Tilemap:
   - first: {x: -3, y: -7, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 35
-      m_TileSpriteIndex: 18
+      m_TileIndex: 36
+      m_TileSpriteIndex: 13
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -11291,8 +11275,8 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: 33057ec204dd24543a20e544691fd65e, type: 2}
   - m_RefCount: 3
     m_Data: {fileID: 11400000, guid: 64948e03c1502e74eae4a67b04321b5f, type: 2}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: 11400000, guid: 66922645f4e56b540a011fd81e9d9f5a, type: 2}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: 25e64455ed7c1c1428a3fbdef456fd1e, type: 2}
   - m_RefCount: 1
@@ -11305,10 +11289,10 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: af2517f1b1731c243a3b498cb7d436cc, type: 2}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: 58ff7451146e0e34197c8684c4a44150, type: 2}
-  - m_RefCount: 4
+  - m_RefCount: 2
     m_Data: {fileID: 11400000, guid: 6b9962ade9154d346ad10ce45e5d9598, type: 2}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: 11400000, guid: 3cac392a537683a4ab16c1a8c1bc9fdc, type: 2}
   - m_RefCount: 3
     m_Data: {fileID: 11400000, guid: 3eb9961ef5159684586dae391b1b9495, type: 2}
   - m_RefCount: 7
@@ -11362,12 +11346,12 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: -1690911966, guid: 60ef0007a1b50e649a3487596418a5da, type: 3}
   - m_RefCount: 10
     m_Data: {fileID: -424375585, guid: 60ef0007a1b50e649a3487596418a5da, type: 3}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: -655761134, guid: 60ef0007a1b50e649a3487596418a5da, type: 3}
   - m_RefCount: 3
     m_Data: {fileID: -2041878822, guid: 60ef0007a1b50e649a3487596418a5da, type: 3}
   - m_RefCount: 4
@@ -11376,7 +11360,7 @@ Tilemap:
     m_Data: {fileID: 1947060408, guid: 60ef0007a1b50e649a3487596418a5da, type: 3}
   - m_RefCount: 9
     m_Data: {fileID: 39027910, guid: 60ef0007a1b50e649a3487596418a5da, type: 3}
-  - m_RefCount: 5
+  - m_RefCount: 3
     m_Data: {fileID: 1230492416, guid: 60ef0007a1b50e649a3487596418a5da, type: 3}
   - m_RefCount: 14
     m_Data: {fileID: -504890831, guid: 60ef0007a1b50e649a3487596418a5da, type: 3}
@@ -11579,7 +11563,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageAmount: 1
-  jugador: {fileID: 841538866}
 --- !u!61 &1107997474
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11705,7 +11688,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageAmount: 1
-  jugador: {fileID: 841538866}
 --- !u!61 &1145736722
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11915,7 +11897,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageAmount: 1
-  jugador: {fileID: 841538866}
 --- !u!61 &1188318526
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12279,7 +12260,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageAmount: 1
-  jugador: {fileID: 841538866}
 --- !u!61 &1225612542
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12405,7 +12385,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageAmount: 1
-  jugador: {fileID: 841538866}
 --- !u!61 &1231067023
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12613,7 +12592,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageAmount: 1
-  jugador: {fileID: 841538866}
 --- !u!61 &1340358963
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12980,7 +12958,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageAmount: 1
-  jugador: {fileID: 841538866}
 --- !u!61 &1487717627
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13106,7 +13083,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageAmount: 1
-  jugador: {fileID: 841538866}
 --- !u!61 &1503397197
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13232,7 +13208,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageAmount: 1
-  jugador: {fileID: 841538866}
 --- !u!61 &1506309347
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13533,7 +13508,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageAmount: 1
-  jugador: {fileID: 841538866}
 --- !u!61 &1698881327
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -44740,16 +44714,6 @@ Tilemap:
       serializedVersion: 2
       m_TileIndex: 6
       m_TileSpriteIndex: 9
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
-  - first: {x: -3, y: -7, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 1
-      m_TileSpriteIndex: 1
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -80849,7 +80813,7 @@ Tilemap:
   m_TileAssetArray:
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 6222
+  - m_RefCount: 6221
     m_Data: {fileID: 11400000, guid: 6b77d7d8326c12c448dc4c78b643c2c6, type: 2}
   - m_RefCount: 0
     m_Data: {fileID: 0}
@@ -80878,7 +80842,7 @@ Tilemap:
   m_TileSpriteArray:
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 6222
+  - m_RefCount: 6221
     m_Data: {fileID: -258683617, guid: 60ef0007a1b50e649a3487596418a5da, type: 3}
   - m_RefCount: 0
     m_Data: {fileID: 0}
@@ -80905,7 +80869,7 @@ Tilemap:
   - m_RefCount: 2
     m_Data: {fileID: -424375585, guid: 60ef0007a1b50e649a3487596418a5da, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 6695
+  - m_RefCount: 6694
     m_Data:
       e00: 1
       e01: 0
@@ -80924,7 +80888,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 6695
+  - m_RefCount: 6694
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
@@ -81049,7 +81013,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageAmount: 1
-  jugador: {fileID: 841538866}
 --- !u!61 &1969955101
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -81400,7 +81363,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageAmount: 1
-  jugador: {fileID: 841538866}
 --- !u!61 &2019642242
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -81526,7 +81488,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageAmount: 1
-  jugador: {fileID: 841538866}
 --- !u!61 &2046888340
 BoxCollider2D:
   m_ObjectHideFlags: 0

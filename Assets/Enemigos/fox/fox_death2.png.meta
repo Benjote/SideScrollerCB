@@ -1,9 +1,5 @@
 fileFormatVersion: 2
-<<<<<<< Updated upstream
 guid: e5c58b50b367d2c44891ad4613c86c33
-=======
-guid: e1b2136cdc521a44ca927d17cf60cf2e
->>>>>>> Stashed changes
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -105,42 +101,6 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: iPhone
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -159,8 +119,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f6d2ecbcfd93c7143aa4344ad9fc5695
-      internalID: -263750722
+      spriteID: b8ff0aef589b702498e72db25fa13f80
+      internalID: 917492730
       vertices: []
       indices: 
       edges: []
@@ -180,8 +140,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: deb87d8c6ee3a564ea05a59e865a57fe
-      internalID: -1870969919
+      spriteID: 814c1aaee1476954f9b6fc7b2537a5a6
+      internalID: 1641268335
       vertices: []
       indices: 
       edges: []
@@ -201,8 +161,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c6ef7800bec60fa4da12fd9a5bb0e565
-      internalID: -1423620485
+      spriteID: aa4102e678a63e24c80fac1c00dda434
+      internalID: 561713289
       vertices: []
       indices: 
       edges: []
@@ -211,10 +171,10 @@ TextureImporter:
       name: fox_death2_3
       rect:
         serializedVersion: 2
-        x: 184
+        x: 186
         y: 3
-        width: 26
-        height: 32
+        width: 35
+        height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -222,8 +182,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a0f8134dbb764ca4ea3950785b9537a8
-      internalID: -139373190
+      spriteID: 2472fbbcaf8823f448fefc3fc21e098a
+      internalID: 1413241208
       vertices: []
       indices: 
       edges: []
@@ -234,8 +194,8 @@ TextureImporter:
         serializedVersion: 2
         x: 236
         y: 4
-        width: 25
-        height: 30
+        width: 29
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -243,8 +203,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 32a0a2adcbc478c4f8d3183aeb31ef0d
-      internalID: -773863602
+      spriteID: 0f7bf5d3958ea514c980ab23b275c5be
+      internalID: -1105828578
       vertices: []
       indices: 
       edges: []
@@ -260,12 +220,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      fox_death2_3: -139373190
-      fox_death2_0: -263750722
-      fox_death2_1: -1870969919
-      fox_death2_5: -26852866
-      fox_death2_4: -773863602
-      fox_death2_2: -1423620485
+      fox_death2_3: 1413241208
+      fox_death2_0: 917492730
+      fox_death2_1: 1641268335
+      fox_death2_5: 1842230402
+      fox_death2_4: -1105828578
+      fox_death2_2: 561713289
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
