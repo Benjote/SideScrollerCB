@@ -77,7 +77,7 @@ public class PlayerWallClimb : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log(collision.collider.gameObject.name);
+        //Debug.Log(collision.collider.gameObject.name);
         if (collision.collider.gameObject.tag == "Ground")
         {
             ExitMode();

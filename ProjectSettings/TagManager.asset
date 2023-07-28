@@ -12,6 +12,7 @@ TagManager:
   - WallCR
   - WallC
   - Pua
+  - PlayerAttack
   layers:
   - Default
   - TransparentFX

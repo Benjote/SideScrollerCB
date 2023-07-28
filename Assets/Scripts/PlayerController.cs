@@ -12,8 +12,8 @@ public class PlayerController : MonoBehaviour
     public LayerMask groundLayer;
     public float jumpForce = 5f;
     public float verticalSpeed = 5f;
-    [SerializeField] private int vidaPersonaje = 3; // Variable de vida visible en el Inspector
-    [SerializeField] private int dañoJugador = 1; // Cantidad de daño que el jugador causa al enemigo
+    [SerializeField] private float vidaPersonaje = 3; // Variable de vida visible en el Inspector
+    [SerializeField] public int dañoJugador = 1; // Cantidad de daño que el jugador causa al enemigo
     private Rigidbody2D rb;
     private SpriteRenderer spriteRenderer;
     private Animator animator;
@@ -22,8 +22,6 @@ public class PlayerController : MonoBehaviour
     private bool isRunning;
     private bool isFalling;
     private bool isFrozen; // Variable para indicar si el jugador está congelado
-    private float posColX = 3.110583f;
-    private float posColY = -2.440398f;
 
     public PlayerWallClimb pwc;
 
@@ -40,6 +38,10 @@ public class PlayerController : MonoBehaviour
 
     private bool isDead; // Variable para verificar si el jugador está muerto
     [SerializeField] private float deathCooldown = 2f; // Tiempo de cooldown después de morir
+
+    public bool isInvulnerable = false; // Variable para rastrear si el jugador está en estado de invulnerabilidad
+    public float invulnerabilityDuration = 1.5f; // Duración de la invulnerabilidad del jugador después de recibir un ataque
+    public float invulnerabilityTimer = 0f; // Temporizador para el estado de invulnerabilidad
 
     public event System.Action OnPlayerDeath;
 
@@ -64,14 +66,12 @@ public class PlayerController : MonoBehaviour
 
         if (moveInput < 0)
         {
-            playerAttack.offset = new Vector2(1.443688f, -2.440398f);
-            playerAttack.size = new Vector2(1.404423f, 1.495153f);
+            playerAttack.offset = new Vector2(-1, 0);
             spriteRenderer.flipX = true;
         }
         else if (moveInput > 0)
         {
-            playerAttack.offset = new Vector2(posColX, posColY);
-            playerAttack.size = new Vector2(1f, playerAttack.size.y);
+            playerAttack.offset = new Vector2(1, 0);
             spriteRenderer.flipX = false;
         }
 
@@ -223,7 +223,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    public void CausarHerida(int cantidadDaño)
+    public void CausarHerida(float cantidadDaño) // Cambiado de int a float
     {
         if (vidaPersonaje > 0)
         {
@@ -240,6 +240,7 @@ public class PlayerController : MonoBehaviour
             }
         }
     }
+
 
     private void Morir()
     {

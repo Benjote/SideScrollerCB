@@ -477,7 +477,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a64b800a212f4844b1857f97df2d003, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvasGOController: {fileID: 0}
   pauseMenu: {fileID: 0}
   pausePanel: {fileID: 0}
   canPause: 1
@@ -604,14 +603,14 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 4855808572741343880}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: QuitGame
-        m_Mode: 1
+        m_MethodName: LoadLevel
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: MainMenu
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!1 &4855808572916086328
@@ -626,7 +625,6 @@ GameObject:
   - component: {fileID: 4855808572916087235}
   - component: {fileID: 4855808572916086332}
   - component: {fileID: 4855808572916086333}
-  - component: {fileID: 4855808572916086334}
   m_Layer: 5
   m_Name: Button - Reload
   m_TagString: Untagged
@@ -738,8 +736,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 4855808572741343880}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: LoadLevel
-        m_Mode: 5
+        m_MethodName: RestartLevel
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -748,19 +746,6 @@ MonoBehaviour:
           m_StringArgument: SampleScene
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &4855808572916086334
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4855808572916086328}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f6b6c4fb129894743b0b8a5a7ac6b7a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nombreNivel: SampleScene
 --- !u!1 &8349194238325141375
 GameObject:
   m_ObjectHideFlags: 0
@@ -848,7 +833,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
+  m_PresetInfoIsWorld: 1
 --- !u!114 &6904017531959968247
 MonoBehaviour:
   m_ObjectHideFlags: 0

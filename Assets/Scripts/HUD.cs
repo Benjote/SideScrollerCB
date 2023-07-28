@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using System;
 
 public class HUD : MonoBehaviour
 {
@@ -47,9 +48,9 @@ public class HUD : MonoBehaviour
         textoMonedas.text = totalMonedas.ToString();
     }
 
-    public void RestaCorazones(int indice)
+    public void RestaCorazones(float indice)
     {
-        Image imagenCorazon = listaCorazones[indice].GetComponent<Image>();
+        Image imagenCorazon = listaCorazones[Convert.ToInt32(Math.Round(indice))].GetComponent<Image>();
         imagenCorazon.sprite = corazonDesactivado;
     }
 }
